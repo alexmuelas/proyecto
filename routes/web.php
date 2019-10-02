@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/addmoney', 'PlayerController@addmoney')->name('addmoney');
+Route::get('/packs/{pack}/comprar', 'PacksController@comprado');
+
+
+//Rutas de PayPal
+Route::post('paypal/confirm', 'ProductController@confirm')->name('paypal-confirm');
+Route::post('paypal/pay', 'PaypalController@payPaypal')->name('paypal-pay');
+Route::get('paypal/status', 'PaypalController@getStatus')->name('paypal-status');
+
+Route::post('download', 'PdfController@download')->name('descargarFactura');

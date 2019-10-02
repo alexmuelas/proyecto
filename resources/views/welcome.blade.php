@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+@extends('layouts.app')
+@section('title', __('Welcome'))
+@section('content')
+
+<!-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -6,10 +10,8 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
@@ -97,3 +99,33 @@
         </div>
     </body>
 </html>
+ -->
+
+
+
+ <div class="wrapper wrapper-full-page">
+    <div class="page-header header-filter" filter-color="black" style="background-image: url({{ asset('img/cesped.jpg') }}); background-size: cover; background-position: top center;">
+     
+
+     </div>
+</div>
+
+
+<!-- <div class="content">
+                <div class="title m-b-md">
+                    Laravel
+                </div>
+
+                <div class="links">
+                    <a href="https://laravel.com/docs">Docs</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="https://nova.laravel.com">Nova</a>
+                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                </div>
+            </div> -->
+
+
+            @endsection

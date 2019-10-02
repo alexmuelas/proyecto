@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Packs;
+use Illuminate\Http\Request;
 
-class PlayerController extends Controller
+class PacksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -83,11 +83,15 @@ class PlayerController extends Controller
         //
     }
 
-    public function addmoney ()
+    public function comprado(Packs $pack)
     {
-        $packs = Packs::all();
-        return view ('money.add', compact('packs'));
-    }
 
-    
+        session([
+            'pack' => $pack,
+            'nombre' => $pack->name
+            
+        ]);
+
+        return view('paypal.confirmar', compact('pack', 'nombre'));
+    }
 }
