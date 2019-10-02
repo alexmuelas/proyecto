@@ -256,6 +256,15 @@
                     <ul class="navbar-nav">
 
                         @guest
+
+                        <a href="{{ route('set_language', ['es']) }}" class="dropdown-item">
+                                {{ __('menu.spain') }}
+                            </a>
+                            <a href="{{ route('set_language', ['en']) }}" class="dropdown-item">
+                                {{ __('menu.english') }}
+                            </a>
+
+                            
                         <li class="nav-item">
                             <a href="../dashboard.html" class="nav-link">
                                 <i class="material-icons">dashboard</i> Dashboard
@@ -268,7 +277,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="login" class="nav-link">
-                                <i class="material-icons">fingerprint</i> Login
+                                <i class="material-icons">fingerprint</i> {{ __('menu.login') }}
                             </a>
                         </li>
                         <li class="nav-item ">
