@@ -240,6 +240,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top text-white">
             <div class="container">
+                @guest
+
                 <div class="navbar-wrapper">
                     <a class="navbar-brand" href="/">Comunio</a>
                 </div>
@@ -255,38 +257,50 @@
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
 
-                        @guest
 
-                        <a href="{{ route('set_language', ['es']) }}" class="dropdown-item">
-                                {{ __('menu.spain') }}
-                            </a>
-                            <a href="{{ route('set_language', ['en']) }}" class="dropdown-item">
-                                {{ __('menu.english') }}
-                            </a>
-
-                            
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="../dashboard.html" class="nav-link">
                                 <i class="material-icons">dashboard</i> Dashboard
                             </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="register" class="nav-link">
-                                <i class="material-icons">person_add</i> Register
-                            </a>
-                        </li>
+                        </li> -->
+
                         <li class="nav-item">
                             <a href="login" class="nav-link">
                                 <i class="material-icons">fingerprint</i> {{ __('menu.login') }}
                             </a>
                         </li>
+
                         <li class="nav-item ">
-                            <a href="../pages/lock.html" class="nav-link">
-                                <i class="material-icons">lock_open</i> Lock
+                            <a href="register" class="nav-link">
+                                <i class="material-icons">person_add</i> {{ __('menu.register') }}
                             </a>
                         </li>
-                        @else
-                        <div>
+
+
+
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">language</i> {{ __('menu.language') }}
+
+
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a href="{{ route('set_language', ['es']) }}" class="dropdown-item">
+                                    {{ __('menu.spain') }}
+                                </a>
+                                <a href="{{ route('set_language', ['en']) }}" class="dropdown-item">
+                                    {{ __('menu.english') }}
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                @else
+                <!-- <div>
                             <li class="nav-item ">
                                 <a>
                                     {{ Auth::user()->user_name }} <span class="caret"></span>
@@ -313,15 +327,18 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
-                        </div>
-
-                        @endguest
+                        </div> -->
 
 
 
 
-                    </ul>
-                </div>
+                @endguest
+
+
+
+
+                <!-- </ul>
+                </div> -->
             </div>
         </nav>
 
@@ -336,6 +353,7 @@
             </div>
 
         </main>
+
     </div>
 </body>
 
