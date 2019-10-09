@@ -25,7 +25,7 @@
         .titulo {
             color: white;
             /*background-color: #db4dff;*/
-            background-color: #1197ca;
+            background-color: green;
             font-size: 20px;
             border-right: 2px solid white;
         }
@@ -58,7 +58,7 @@
         .informacion-footer {
             width: 100%;
             /*background-color: #db4dff;*/
-            background-color: #1197ca;
+            background-color: green;
         }
     </style>
     <title>Confirmar pedido</title>
@@ -68,7 +68,8 @@
 <div class="row">
     <div class="col-md-6">
         <div class="imagen">
-            <img src="{{ asset('img/logo-fromapop.jpg') }}" alt="Logo Fromapop">
+        <!-- Insertar logo -->
+            <img src="#" alt="Logo Comunio">
         </div>
     </div>
 </div>
@@ -81,8 +82,8 @@
             <div class="card-title">
                 <h5 class="text-center">Estas a punto de realizar una compra de monedas en Comunio</h5>
             </div>
-            <div class="card-body">
-                <table class="tabla">
+            <div class="card-body  align-items-center d-flex justify-content-center">
+                <table class="tabla text-center">
                     <tr>
                         <th class="titulo">Nombre</th>
                         <th class="titulo">Monedas</th>
@@ -103,7 +104,7 @@
 
 <br><br>
 
-<div class="row">
+<div class="row text-center">
     <div class="col-md-5"></div>
     <div class="col-md-2">
         <form class="" method="POST" id="payment-form"  action="{{route('paypal-pay')}}">
@@ -114,7 +115,7 @@
             <input type="submit" class="btn btn-info" value="Confirmar">
         </form>
         <br>
-        <a class="btn btn-danger" href="#">Volver a la tienda</a>
+        <a class="btn btn-danger" href="#">Cancelar</a>
         <br><br><br><br><br>
     </div>
 </div>
@@ -122,8 +123,7 @@
 <footer>
 
     <div class="informacion-footer">
-        <p>FromaPop España</p>
-        <p>fromapop@gmail.com</p>
+        <p>Comunio España</p>
     </div>
 
 </footer>

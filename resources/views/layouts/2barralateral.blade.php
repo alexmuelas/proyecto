@@ -237,8 +237,7 @@
 </head>
 
 <body>
-<div class="wrapper " style="background-image: url({{ asset('img/estadio.jpg') }});  background-repeat:no-repeat;
-background-size:100% 100%;" >
+<div class="wrapper ">
     <div class="sidebar" data-color="rose" data-background-color="black" data-image="#">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -524,7 +523,18 @@ background-size:100% 100%;" >
               </ul>
             </div>
           </li>
-          
+          <li class="nav-item ">
+            <a class="nav-link" href="../examples/widgets.html">
+              <i class="material-icons">widgets</i>
+              <p> Widgets </p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="../examples/charts.html">
+              <i class="material-icons">timeline</i>
+              <p> Charts </p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="../examples/calendar.html">
               <i class="material-icons">date_range</i>
@@ -532,7 +542,7 @@ background-size:100% 100%;" >
             </a>
           </li>
         </ul>
-      </div> 
+      </div>
     </div>
     <div class="main-panel">
       <!-- Navbar -->
@@ -560,12 +570,10 @@ background-size:100% 100%;" >
 
       
             <div class="wrapper wrapper-full-page">
-                <!-- <div class="page-header" filter-color="black"
-                    style="background-image: url({{ asset('img/estadio.jpg') }}); background-size: cover; "> -->
-                    <div class="py-5">
-                      @yield('content')
-                    </div>
-                  
+                <div class="page-header" filter-color="black"
+                    style="background-image: url({{ asset('img/estadio.jpg') }}); background-size: cover; ">
+                    @yield('content')
+
 
                 </div>
             </div>

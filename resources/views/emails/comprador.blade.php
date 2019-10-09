@@ -25,7 +25,6 @@
         <ul>
             <li><strong>Nombre:</strong> {{$pack->name}}</li>
             <li><strong>Monedas:</strong> {{$pack->money}}</li>
-            <br>
             <li><strong>Precio:</strong> {{$pack->price}}</li>
         </ul>
         <hr>

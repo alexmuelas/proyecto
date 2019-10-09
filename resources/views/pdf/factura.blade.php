@@ -23,7 +23,7 @@
         .titulo {
             color: white;
             /*background-color: #db4dff;*/
-            background-color: #1197ca;
+            background-color: green;
             font-size: 20px;
             border-right: 2px solid white;
         }
@@ -54,7 +54,7 @@
         .informacion-footer {
             width: 100%;
             /*background-color: #db4dff;*/
-            background-color: #1197ca;
+            background-color: green;
 
         }
     </style>
@@ -65,7 +65,8 @@
     <div class="row">
         <div class="col-md-6">
             <div class="imagen">
-                <img src="{{ public_path('img/logo-fromapop.jpg') }}" alt="Logo Fromapop">
+            <!-- Falta insertar logo -->
+                <!-- <img src="{{ public_path('img/logo-.jpg') }}" alt="Logo Comunio"> -->
             </div>
         </div>
     </div>
@@ -73,8 +74,6 @@
     <h5>Datos de facturación</h5>
     <ul>
         <li>Nombre y apellidos: {{ $comprador->name }}</li>
-        <li>Dirección: {{ $comprador->address }}</li>
-        <li>Teléfono: {{ $comprador->phone }}</li>
         <li>Email: {{ $comprador->email }}</li>
     </ul>
     <br><br>
@@ -96,11 +95,10 @@
 
 <footer>
     <div class="icono">
-        <img src="" width="10%" alt="Logo Fromapop">
+        <img src="" width="10%" alt="Logo Comunio">
     </div>
     <div class="informacion-footer">
-        <p>FromaPop España</p>
-        <p>fromapop@gmail.com</p>
+        <p>Comunio España</p>
     </div>
 
 </footer>
