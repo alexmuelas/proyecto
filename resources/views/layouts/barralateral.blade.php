@@ -261,7 +261,7 @@ background-size:100% 100%;" >
           <div class="user-info">
             <a data-toggle="collapse" href="#collapseExample" class="username">
               <span>
-                Tania Andrew
+              {{ Auth::user()->user_name }}
                 <b class="caret"></b>
               </span>
             </a>
@@ -270,7 +270,7 @@ background-size:100% 100%;" >
                 <li class="nav-item">
                   <a class="nav-link" href="#">
                     <span class="sidebar-mini"> MP </span>
-                    <span class="sidebar-normal"> My Profile </span>
+                    <span class="sidebar-normal"> {{ __('menu.my_profile') }} </span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -279,12 +279,14 @@ background-size:100% 100%;" >
                     <span class="sidebar-normal"> Edit Profile </span>
                   </a>
                 </li>
-                <li class="nav-item">
+              <!--  <li class="nav-item">
                   <a class="nav-link" href="#">
                     <span class="sidebar-mini"> S </span>
                     <span class="sidebar-normal"> Settings </span>
                   </a>
                 </li>
+                --->
+                
               </ul>
             </div>
           </div>
@@ -555,21 +557,19 @@ background-size:100% 100%;" >
           
         </div>
 
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" >
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown"  style="left: -20px;">
                             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="material-icons">language</i> {{ __('menu.language') }}
-
-
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a href="{{ route('set_language', ['es']) }}" class="dropdown-item">
+                                <a href="{{ route('set_language', ['es']) }}" class="dropdown-item" style="width: 120px;">
                                     {{ __('menu.spain') }}
                                 </a>
-                                <a href="{{ route('set_language', ['en']) }}" class="dropdown-item">
+                                <a href="{{ route('set_language', ['en']) }}" class="dropdown-item" style="width: 120px;">
                                     {{ __('menu.english') }}
                                 </a>
                             </div>

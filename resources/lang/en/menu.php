@@ -7,5 +7,6 @@ return [
     'register'   => 'Register',
     'category'   => 'Manage Categories',
     'product'   => 'Manage Products',
-    'title' => 'My store of products'
+    'title' => 'My store of products',
+    'my_profile' => "My Profile"
 ];
