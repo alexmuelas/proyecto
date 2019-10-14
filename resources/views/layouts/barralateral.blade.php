@@ -554,6 +554,29 @@ background-size:100% 100%;" >
           </button>
           
         </div>
+
+        <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown"  style="left: -20px;">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">language</i> {{ __('menu.language') }}
+
+
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a href="{{ route('set_language', ['es']) }}" class="dropdown-item">
+                                    {{ __('menu.spain') }}
+                                </a>
+                                <a href="{{ route('set_language', ['en']) }}" class="dropdown-item">
+                                    {{ __('menu.english') }}
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
       </nav>
       <!-- End Navbar -->
 
