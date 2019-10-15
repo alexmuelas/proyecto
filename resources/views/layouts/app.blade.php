@@ -243,6 +243,9 @@
                 @guest
 
                 <div class="navbar-wrapper">
+                    <i class="material-icons">
+                        home
+                    </i>
                     <a class="navbar-brand" href="/">Comunio</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"

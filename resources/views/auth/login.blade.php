@@ -89,8 +89,8 @@
           @csrf  
             <div class="card card-login card-hidden">
                 <div class="card-header card-header-rose text-center">
-                  <h4 class="card-title">Login</h4>
-                  <div class="social-line">
+                  <h4 class="card-title">{{ __('menu.login')}}</h4>
+                  <!-- <div class="social-line">
                     <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
                       <i class="fa fa-facebook-square"></i>
                     </a>
@@ -100,7 +100,7 @@
                     <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
                       <i class="fa fa-google-plus"></i>
                     </a>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="card-body ">
                   <!-- <p class="card-description text-center">Or Be Classical</p>
@@ -139,7 +139,7 @@
                           <i class="material-icons">email</i>
                         </span>
                       </div>
-                      <input id="login" type="text"
+                      <input id="login" type="text" placeholder="{{ __('login_register.name_email')}}"
                                     class="form-control{{ $errors->has('user_name') || $errors->has('email') ? ' is-invalid' : '' }}"
                                     name="login" value="{{ old('user_name') ?: old('email') }}" required autofocus>
                     </div>
@@ -151,7 +151,7 @@
                           <i class="material-icons">lock_outline</i>
                         </span>
                       </div>
-                      <input id="password" type="password"
+                      <input id="password" type="password" placeholder="{{ __('login_register.password')}}"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     required autocomplete="current-password">                    </div>
                   </span>

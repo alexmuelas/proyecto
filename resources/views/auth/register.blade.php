@@ -4,8 +4,25 @@
 
 <div class="container">
     <div class="row justify-content-center">
+    
         <div class="col-md-4">
+        
             <div class="card">
+            <div class="card-header card-header-rose text-center">
+                  <h4 class="card-title">{{ __('menu.register')}}</h4>
+                  <!-- <div class="social-line">
+                    <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                      <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </div> -->
+                </div>
+                <div class="card-body ">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
@@ -20,7 +37,7 @@
                             <div class="col-md-8">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                                     name="name" value="{{ old('name') }}" required autocomplete="name"
-                                    placeholder="Name..." autofocus>
+                                    placeholder="{{ __('login_register.name')}}" autofocus>
 
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -45,7 +62,7 @@
                             <div class="col-md-8">
                                 <input id="user_name" type="text"
                                     class="form-control{{ $errors->has('user_name') ? ' is-invalid' : '' }}"
-                                    name="user_name" value="{{ old('user_name') }}" placeholder="UserName..." required>
+                                    name="user_name" value="{{ old('user_name') }}" placeholder="User Name..." required>
 
                                 @if ($errors->has('user_name'))
                                 <span class="invalid-feedback">
@@ -91,7 +108,7 @@
                             <div class="col-md-8">
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
-                                    required autocomplete="new-password" placeholder="Password...">
+                                    required autocomplete="new-password" placeholder="{{ __('login_register.password')}}">
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -110,7 +127,7 @@
                                 </span>
                             </div>
                             <div class="col-md-8">
-                                <input id="password-confirm" type="password" class="form-control"
+                                <input id="password-confirm" type="password" class="form-control" placeholder="{{ __('login_register.password2')}}"
                                     name="password_confirmation" required autocomplete="new-password" placeholder="Repeat Password...">
                             </div>
                         </div>
