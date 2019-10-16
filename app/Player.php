@@ -16,7 +16,15 @@ class Player extends Model
         public function getTeamNameAttribute()
     {
         $team = Team::where('id', $this->id_team)->first()->name;
+
         return $team;
+    }
+
+    public function getUserNameAttribute()
+    {
+        $user = User::where('id', $this->id_user)->first()['name'];
+        
+        return $user;
     }
 
 }
