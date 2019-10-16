@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Packs;
 use App\Player;
+use App\Team;
 
 class PlayerController extends Controller
 {
@@ -92,10 +93,10 @@ class PlayerController extends Controller
 
     public function table_player()
     {
+        
+        $players = Player::paginate(10);
 
-        $players = Player::paginate ( 10 );
-        return view ( 'player.table', compact ( 'players' ) );
-
+        return view ( 'player.table', compact ( 'players') );
     }
     
 }

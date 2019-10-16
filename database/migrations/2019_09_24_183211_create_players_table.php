@@ -18,10 +18,9 @@ class CreatePlayersTable extends Migration
             $table->string('name');
             $table->integer('id_user')->nullable();
 
-            $table->bigInteger('id_team')->unsigned();
-
-            // $table->foreign ('id_team')->references('id')->on('teams')  ->onDelete ( 'cascade' )
-            // ->onUpdate ( 'cascade' );
+            // $table->bigInteger('id_team')->unsigned();
+            $table->unsignedBigInteger('id_team');
+            $table->foreign('id_team')->references('id')->on('teams');
 
             $table->integer('num_dorsal');
             $table->integer('valor_inicial');
@@ -31,9 +30,10 @@ class CreatePlayersTable extends Migration
           
         });
 
-        Schema::table('players', function($table) {
-            $table->foreign('id_team')->references('id')->on('teams');
-        });
+        // Schema::table('players', function($table) {
+        //     $table->foreign('id_team')->references('id')->on('teams');
+        // });
+
     }
 
     /**

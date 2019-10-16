@@ -10,7 +10,13 @@ class Player extends Model
 
     public function team()
     {
-   return $this->belongsTo(Team::class);
+        return $this->belongsTo(Team::class);
+    }
+
+        public function getTeamNameAttribute()
+    {
+        $team = Team::where('id', $this->id_team)->first()->name;
+        return $team;
     }
 
 }
