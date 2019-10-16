@@ -17,12 +17,22 @@ class CreatePlayersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('id_user')->nullable();
-            $table->integer('id_team');
+
+            $table->integer('id_team')->unsigned();
+
+            // $table->foreign ('id_team')->references('id')->on('teams')  ->onDelete ( 'cascade' )
+            // ->onUpdate ( 'cascade' );
+
             $table->integer('num_dorsal');
             $table->integer('valor_inicial');
             $table->string('position');
             $table->string('points')->nullable();
             $table->timestamps();
+          
+        });
+
+        Schema::table('players', function($table) {
+            $table->foreign('id_team')->references('id')->on('teams');
         });
     }
 
