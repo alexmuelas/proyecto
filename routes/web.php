@@ -25,6 +25,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/addmoney', 'PlayerController@addmoney')->name('addmoney');
 Route::get('/packs/{pack}/comprar', 'PacksController@comprado');
 
+//Tabla users
+Route::get('/users', 'UsersController@table_users')->name('users');
+
+//Tabla players
+Route::get('/player', 'PlayerController@table_player')->name('player');
+
 
 //Rutas de PayPal
 Route::post('paypal/confirm', 'ProductController@confirm')->name('paypal-confirm');

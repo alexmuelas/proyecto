@@ -16,5 +16,15 @@ return [
     'edit.bid' => "Edit Bids",
     'clasification' =>"Clasification",
     'user' =>"User",
-    'player' =>"Player"
+    'player' =>"Player",
+    'name' =>"Name",
+    'options' =>"Options",
+    'money' => "Money",
+    'table_user' => "Table Users",
+    'owner' => "Owner",
+    'value' => "Initial Value",
+    'position' => "Position",
+    'points' => "Points",
+
+
 ];

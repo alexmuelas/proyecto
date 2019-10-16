@@ -367,14 +367,14 @@ background-size:100% 100%;">
                     @if(auth()->user()->admin == true)
 
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/forms/regular.html">
+                        <a class="nav-link" href="{{ url('/users') }}">
                             <i class="material-icons">people</i>
                             <span class="sidebar-normal"> {{ __('menu.user') }} </span>
                         </a>
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/forms/regular.html">
+                        <a class="nav-link" href="{{ url('/player') }}">
                             <i class="material-icons">sports_kabaddi</i>
                             <span class="sidebar-normal"> {{ __('menu.player') }} </span>
                         </a>
@@ -405,7 +405,7 @@ background-size:100% 100%;">
                 </div>
 
                 <div class="collapse navbar-collapse" style="color: white; ">
-                    <ul class="navbar-nav" style="width: 200px;">
+                    <ul class="navbar-nav" style="width: 210px;">
                         <li class="nav-item dropdown" style="left: -20px;">
                             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

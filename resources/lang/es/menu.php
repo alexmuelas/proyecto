@@ -16,6 +16,16 @@ return [
     'edit.bid' => "Editar Pujas",
     'clasification' =>"Clasificación",
     'user' =>"Usuarios",
-    'player' =>"Jugadores"
+    'player' =>"Jugadores",
+    'name' =>"Nombre",
+    'options' =>"Opciones",
+    'money' => "Dinero",
+    'table_user' => "Tabla Usuarios",
+    'owner' => "Propietario",
+    'value' => "Valor Inicial",
+    'position' => "Posicion",
+    'points' => "Puntos",
+
+
 
 ];

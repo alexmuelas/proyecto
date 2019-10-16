@@ -8,4 +8,9 @@ class Player extends Model
 {
     protected $fillable = ['id', 'name', 'id_user', 'id_team', 'num_dorsal', 'valor_inicial', 'position','points'];
 
+    public function team()
+    {
+   return $this->belongsTo(Team::class);
+    }
+
 }

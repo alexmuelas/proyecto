@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Packs;
-use App\Player;
+use App\User;
 
-class PlayerController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -84,18 +83,11 @@ class PlayerController extends Controller
         //
     }
 
-    public function addmoney ()
-    {
-        $packs = Packs::all();
-        return view ('money.add', compact('packs'));
-    }
-
-    public function table_player()
+    public function table_users()
     {
 
-        $players = Player::paginate ( 10 );
-        return view ( 'player.table', compact ( 'players' ) );
+        $users = User::sortable ()->paginate ( 10 );
+        return view ( 'user.table', compact ( 'users' ) );
 
     }
-    
 }
