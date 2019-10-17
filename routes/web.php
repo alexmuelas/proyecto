@@ -27,6 +27,11 @@ Route::get('/packs/{pack}/comprar', 'PacksController@comprado');
 
 //Tabla users
 Route::get('/users', 'UsersController@table_users')->name('users');
+Route::get('/editmyuser', 'UsersController@edit_my_user')->name('edit_my_user');
+
+Route::put('/usersedit', 'UsersController@update');
+
+
 
 //Tabla players
 Route::get('/player', 'PlayerController@table_player')->name('player');

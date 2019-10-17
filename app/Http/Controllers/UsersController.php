@@ -67,9 +67,33 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required | min:3',
+            'user_name' => 'required | max:200',
+        ], [
+            'name.required' => 'El nombre es obligatorio',
+            'name.min' => 'El nombre ha de tener al menos 3 caracteres',
+            // 'description.required' => 'La descripción es obligatoria',
+            // 'description.max' => 'La descripción no puede tener más de 200 caracteres',
+            // 'price.required' => 'El precio es obligatorio',
+            // 'price.numeric' => 'El precio debe ser un número',
+            // 'price.min' => 'El precio mínimo es cero'
+
+        ]);
+        $id = Auth::user()->id;
+        $user = User::findOrFail($id);
+        $user->name = $request->input('name');
+        $user->user_name = $request->input('user_name');
+        $user->email = $request->input('email');
+        $user->save();
+
+        return redirect('users')->with('status', 'Profile updated!');
+    }
+
+    public function edit_my_user(){
+        return view ('user.edit');
     }
 
     /**
@@ -90,4 +114,6 @@ class UsersController extends Controller
         return view ( 'user.table', compact ( 'users' ) );
 
     }
+
+    
 }

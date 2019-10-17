@@ -245,14 +245,14 @@ background-size:100% 100%;">
 
         Tip 2: you can also add an image using data-image tag
     -->
-            <div class="logo">
+            <!-- <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text logo-mini">
                     CT
                 </a>
                 <a href="http://www.creative-tim.com" class="simple-text logo-normal">
                     Creative Tim
                 </a>
-            </div>
+            </div> -->
             <div class="sidebar-wrapper">
                 <div class="user">
                     <div class="photo">
@@ -274,7 +274,7 @@ background-size:100% 100%;">
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{ url('/editmyuser') }}">
                                         <span class="sidebar-mini"> EP </span>
                                         <span class="sidebar-normal"> {{ __('menu.edit_my_profile') }} </span>
                                     </a>
@@ -293,7 +293,7 @@ background-size:100% 100%;">
                 </div>
                 <ul class="nav">
                     <li class="nav-item active ">
-                        <a class="nav-link" href="../examples/dashboard.html">
+                        <a class="nav-link" href="{{ url('/home') }}">
                             <i class="material-icons">dashboard</i>
                             <p> Dashboard </p>
                         </a>
@@ -305,7 +305,16 @@ background-size:100% 100%;">
                                 <b class="caret"></b>
                             </p>
                         </a>
+                  
                         <div class="collapse" id="pagesExamples">
+                        <ul class="nav">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="../examples/pages/pricing.html">
+                                        <!-- <span class="sidebar-mini"> P </span> -->
+                                        <span class="sidebar-normal"> {{ __('menu.team') }} </span>
+                                    </a>
+                                </li>
+                            </ul>
                             <ul class="nav">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="../examples/pages/pricing.html">
