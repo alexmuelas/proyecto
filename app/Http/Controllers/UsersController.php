@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -69,6 +70,7 @@ class UsersController extends Controller
      */
     public function update(Request $request)
     {
+        // dd($request);
         $this->validate($request, [
             'name' => 'required | min:3',
             'user_name' => 'required | max:200',
