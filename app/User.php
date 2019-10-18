@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Kyslik\ColumnSortable\Sortable;
 
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, Sortable;
 
@@ -44,4 +44,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Player::class);
     }
+
+    
 }

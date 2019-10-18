@@ -2,7 +2,7 @@
 @section('title', __('Welcome'))
 @section('content')
 
-<div class="content">
+<div class="content text-center">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-6">

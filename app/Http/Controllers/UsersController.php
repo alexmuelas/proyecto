@@ -71,12 +71,28 @@ class UsersController extends Controller
     public function update(Request $request)
     {
         // dd($request);
+        $id = Auth::user()->id;
         $this->validate($request, [
-            'name' => 'required | min:3',
-            'user_name' => 'required | max:200',
+            'name' => 'required | min:3 | max:200',
+            'user_name' => 'required | min:4 | max:200 |unique:users',
+            'email' => 'required | email |unique:users',
+
         ], [
+
+            //PENDIENTE TERMINAR QUE DEJE EDITAR CON EL MISMO EMAIL O USERNAME
+
+
             'name.required' => 'El nombre es obligatorio',
             'name.min' => 'El nombre ha de tener al menos 3 caracteres',
+            'name.max' => 'El nombre ha de tener como maximo 200 caracteres',
+            'user_name.required' => 'El nombre de usuario es obligatorio',
+            'user_name.min' => 'El nombre de usuario ha de tener al menos 5 caracteres',
+            'user_name.max' => 'El nombre de usuario ha de tener como maximo 200 caracteres',
+            // 'user_name.unique' => 'El nombre de usuario debe ser unico',
+            'email.required' => 'El email es obligatorio',
+            'email.email' => 'El email debe ser un email.',
+            // 'email.unique' => 'Ese email ya existe.'
+
             // 'description.required' => 'La descripción es obligatoria',
             // 'description.max' => 'La descripción no puede tener más de 200 caracteres',
             // 'price.required' => 'El precio es obligatorio',
@@ -84,7 +100,7 @@ class UsersController extends Controller
             // 'price.min' => 'El precio mínimo es cero'
 
         ]);
-        $id = Auth::user()->id;
+        
         $user = User::findOrFail($id);
         $user->name = $request->input('name');
         $user->user_name = $request->input('user_name');

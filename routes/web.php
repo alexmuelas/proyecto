@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes(['verify' => true]);
+
 Route::get('set_language/{lang}', 'Controller@setLanguage')->name('set_language');
 
 
