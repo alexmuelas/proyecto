@@ -23,9 +23,9 @@ class EventServiceProvider extends ServiceProvider
     // ];
 
     protected $listen = [
-        'Illuminate\Auth\Events\Verified' => [
-            'App\Listeners\LogVerifiedUser',
-        ],
+        // 'Illuminate\Auth\Events\Verified' => [
+        //     'App\Listeners\LogVerifiedUser',
+        // ],
     ];
 
     /**
