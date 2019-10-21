@@ -33,6 +33,9 @@ Route::get('/editmyuser', 'UsersController@edit_my_user')->name('edit_my_user');
 
 Route::put('/usersedit', 'UsersController@update');
 
+Route::delete('/users/{user}', 'UsersController@destroy');
+
+
 
 
 //Tabla players

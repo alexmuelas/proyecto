@@ -25,6 +25,10 @@ return [
     'value' => "Initial Value",
     'position' => "Position",
     'points' => "Points",
+    'delete' => "Delete",
+    'cancel' => "Cancel",
+    'sure' => "Are you sure you want to delete it?"
+
 
 
 ];

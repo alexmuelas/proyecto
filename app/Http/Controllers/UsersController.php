@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
+
 
 class UsersController extends Controller
 {
@@ -74,13 +76,15 @@ class UsersController extends Controller
         $id = Auth::user()->id;
         $this->validate($request, [
             'name' => 'required | min:3 | max:200',
-            'user_name' => 'required | min:4 | max:200 |unique:users',
-            'email' => 'required | email |unique:users',
+            'user_name' => 'required | min:4 | max:200 ',
+            'email' => 'required | email ',
+
+
+
+             'email' => ['required', 'email', Rule::unique('users', 'email')->ignore(auth()->user()->id)],
+            'user_name' => ['required', Rule::unique('users', 'user_name')->ignore(auth()->user()->id)],
 
         ], [
-
-            //PENDIENTE TERMINAR QUE DEJE EDITAR CON EL MISMO EMAIL O USERNAME
-
 
             'name.required' => 'El nombre es obligatorio',
             'name.min' => 'El nombre ha de tener al menos 3 caracteres',
@@ -88,16 +92,10 @@ class UsersController extends Controller
             'user_name.required' => 'El nombre de usuario es obligatorio',
             'user_name.min' => 'El nombre de usuario ha de tener al menos 5 caracteres',
             'user_name.max' => 'El nombre de usuario ha de tener como maximo 200 caracteres',
-            // 'user_name.unique' => 'El nombre de usuario debe ser unico',
+            'user_name.unique' => 'El nombre de usuario debe ser unico',
             'email.required' => 'El email es obligatorio',
             'email.email' => 'El email debe ser un email.',
-            // 'email.unique' => 'Ese email ya existe.'
-
-            // 'description.required' => 'La descripción es obligatoria',
-            // 'description.max' => 'La descripción no puede tener más de 200 caracteres',
-            // 'price.required' => 'El precio es obligatorio',
-            // 'price.numeric' => 'El precio debe ser un número',
-            // 'price.min' => 'El precio mínimo es cero'
+            'email.unique' => 'Ese email ya existe.'
 
         ]);
         
@@ -107,7 +105,7 @@ class UsersController extends Controller
         $user->email = $request->input('email');
         $user->save();
 
-        return redirect('users')->with('status', 'Profile updated!');
+        return redirect('home')->with('status', 'Profile updated!');
     }
 
     public function edit_my_user(){
@@ -122,8 +120,23 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect('/users');
+
     }
+
+
+
+    // public function destroy(Category $category)
+    // {
+    //     $category->products()->update(['category_id' => null]);
+
+    //     $category->delete();
+
+    //     return redirect('admin/categories');
+    // }
 
     public function table_users()
     {

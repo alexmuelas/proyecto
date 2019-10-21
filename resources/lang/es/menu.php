@@ -25,6 +25,9 @@ return [
     'value' => "Valor Inicial",
     'position' => "Posicion",
     'points' => "Puntos",
+    'delete' => "Eliminar",
+    'cancel' => "Cancelar",
+    'sure' => "¿Estas seguro que quieres eliminarlo?"
 
 
 
