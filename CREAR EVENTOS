@@ -1,0 +1,13 @@
+Lo primero de todo es editar el crontab
+-crontab -e
+
+Le añadimos:
+
+    Si es en docker: * * * * * php /var/www/proyectocomunio/artisan schedule:run >> /dev/null 2>&1
+
+    Si es en linux/windows: * * * * * php /home/alex/docker/proyectocomunio/artisan schedule:run >> /dev/null 2>&1
+
+
+Si quiero probarlo al momento:
+     php artisan schedule:run
+
