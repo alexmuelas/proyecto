@@ -145,6 +145,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name_myteam'             => 'name my team',
+        'user_name'             => 'user name',
+
+
+    ],
 
 ];

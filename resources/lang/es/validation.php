@@ -86,7 +86,7 @@ return [
     'min'                  => [
         'numeric' => 'El tamaño de :attribute debe ser de al menos :min.',
         'file'    => 'El tamaño de :attribute debe ser de al menos :min kilobytes.',
-        'string'  => ':attribute debe contener al menos :min caracteres.',
+        'string'  => 'El :attribute debe contener al menos :min caracteres.',
         'array'   => ':attribute debe tener al menos :min elementos.',
     ],
     'not_in'               => ':attribute es inválido.',
@@ -128,14 +128,6 @@ return [
     */
 
     'custom' => [
-        'name' => [
-            'required' => 'El nombre es obligatorio',
-            'min' => 'El nombre debe contener minimo 3 caracteres',
-        ],
-        'user_name' => [
-            'required' => 'El nombre es obligatorio',
-            'min' => 'El nombre debe contener minimo 3 caracteres',
-        ],
         'password' => [
             'min' => 'La :attribute debe contener más de :min caracteres',
         ],
@@ -158,6 +150,8 @@ return [
     'attributes' => [
         'name'                  => 'nombre',
         'username'              => 'usuario',
+        'user_name'             => 'nombre de usuario',
+        'name_myteam'             => 'nombre de equipo',
         'email'                 => 'correo electrónico',
         'first_name'            => 'nombre',
         'last_name'             => 'apellido',
