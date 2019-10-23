@@ -128,6 +128,14 @@ return [
     */
 
     'custom' => [
+        'name' => [
+            'required' => 'El nombre es obligatorio',
+            'min' => 'El nombre debe contener minimo 3 caracteres',
+        ],
+        'user_name' => [
+            'required' => 'El nombre es obligatorio',
+            'min' => 'El nombre debe contener minimo 3 caracteres',
+        ],
         'password' => [
             'min' => 'La :attribute debe contener más de :min caracteres',
         ],

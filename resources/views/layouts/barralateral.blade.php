@@ -268,7 +268,7 @@ background-size:100% 100%;">
                         <div class="collapse" id="collapseExample">
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{ url('/showmyuser') }}">
                                         <span class="sidebar-mini"> MP </span>
                                         <span class="sidebar-normal"> {{ __('menu.my_profile') }} </span>
                                     </a>

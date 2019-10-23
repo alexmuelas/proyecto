@@ -30,7 +30,11 @@ Route::get('/packs/{pack}/comprar', 'PacksController@comprado');
 //Tabla users
 Route::get('/users', 'UsersController@table_users')->name('users');
 Route::get('/editmyuser', 'UsersController@edit_my_user')->name('edit_my_user');
+Route::get('/showmyuser', 'UsersController@show_my_user')->name('show_my_user');
 
+
+
+Route::put('/usersedit', 'UsersController@update');
 Route::put('/usersedit', 'UsersController@update');
 
 Route::delete('/users/{user}', 'UsersController@destroy');

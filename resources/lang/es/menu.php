@@ -11,6 +11,7 @@ return [
     'my_profile' => "Mi Perfil",
     'edit_my_profile' => "Editar Perfil",
     'team' => "Equipo",
+    'name_myteam' => "Nombre Equipo",
     'edit_team' => "Editar equipo",
     'bid' => "Pujas",
     'edit.bid' => "Editar Pujas",
@@ -27,7 +28,8 @@ return [
     'points' => "Puntos",
     'delete' => "Eliminar",
     'cancel' => "Cancelar",
-    'sure' => "¿Estas seguro que quieres eliminarlo?"
+    'sure' => "¿Estas seguro que quieres eliminarlo?",
+    'name_myteam' =>"Nombre equipo"
 
 
 

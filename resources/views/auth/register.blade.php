@@ -23,6 +23,15 @@
                   </div> -->
                 </div>
                 <div class="card-body ">
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif  
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
@@ -73,6 +82,26 @@
                         </div>
                     </div>
 
+                    <div class="form-group has-default">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="material-icons">sports_soccer</i>
+                                </span>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="name_myteam" type="text"
+                                    class="form-control @error('name_myteam') is-invalid @enderror" name="name_myteam"
+                                    required autocomplete="new-name_myteam" value="{{ old('name_myteam') }}" placeholder="{{ __('menu.name_myteam')}}">
+
+                                @error('name_myteam')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
 
 
 

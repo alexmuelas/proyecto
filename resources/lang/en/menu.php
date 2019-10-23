@@ -11,6 +11,7 @@ return [
     'my_profile' => "My Profile",
     'edit_my_profile' => "Edit Profile",
     'team' => "Team",
+    'name_myteam' => "Name Team",
     'edit_team' => "Edit Team",
     'bid' => "Bids",
     'edit.bid' => "Edit Bids",
@@ -27,7 +28,8 @@ return [
     'points' => "Points",
     'delete' => "Delete",
     'cancel' => "Cancel",
-    'sure' => "Are you sure you want to delete it?"
+    'sure' => "Are you sure you want to delete it?",
+    'name_myteam' =>"Name my team"
 
 
 

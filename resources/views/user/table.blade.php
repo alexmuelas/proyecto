@@ -22,6 +22,7 @@
                                         <th>{{ __('menu.name') }}</th>
                                         <th>User Name</th>
                                         <th>Email</th>
+                                        <th>{{ __('menu.name_myteam') }}</th>
                                         <th class="text-right">{{ __('menu.money') }}</th>
                                         <th class="text-right">{{ __('menu.options') }}</th>
                                     </tr>
@@ -35,6 +36,7 @@
                                         <td>{{ $user->name}}</td>
                                         <td>{{ $user->user_name}}</td>
                                         <td>{{ $user->email}}</td>
+                                        <th>{{ $user->name_myteam}}</th>
                                         <td class="text-right">{{ $user->money}} &euro;</td>
                                         <td class="td-actions text-right">
                                             <button type="button" rel="tooltip" class="btn btn-success btn-round">

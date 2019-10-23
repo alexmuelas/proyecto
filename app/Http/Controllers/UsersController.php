@@ -119,6 +119,10 @@ class UsersController extends Controller
         return view ('user.edit');
     }
 
+    public function show_my_user(){
+        return view ('user.show_user');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
