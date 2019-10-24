@@ -39,9 +39,9 @@
                                         <th>{{ $user->name_myteam}}</th>
                                         <td class="text-right">{{ $user->money}} &euro;</td>
                                         <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" class="btn btn-success btn-round">
+                                            <a type="button" rel="tooltip" class="btn btn-success btn-round" href="{{ url('/user/' . $user->id . '/edit' ) }}">
                                                 <i class="material-icons">edit</i>
-                                            </button>
+                                            </a>
 
 
 

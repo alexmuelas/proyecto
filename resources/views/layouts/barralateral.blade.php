@@ -351,24 +351,14 @@ background-size:100% 100%;">
                         </div>
                     </li>
 
-                    <!-- <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#formsExamples">
-              <i class="material-icons">date_range</i>
-              <p> {{ __('menu.clasification') }}
-                <b class="caret"></b>
-              </p>
-            </a>
-            <div class="collapse" id="formsExamples">
-              <ul class="nav"> -->
+                    
                     <li class="nav-item ">
                         <a class="nav-link" href="../examples/forms/regular.html">
                             <i class="material-icons">date_range</i>
                             <span class="sidebar-normal"> {{ __('menu.clasification') }} </span>
                         </a>
                     </li>
-                    <!-- </ul>
-            </div>
-          </li> -->
+                    
 
 
 
@@ -466,72 +456,6 @@ background-size:100% 100%;">
         </div>
 
 
-
-
-
-
-        <!-- <div class="content">
-        <div class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card ">
-         
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="card card-chart">
-                              <div class="card-header card-header-rose">
-                              </div>
-                              <div class="card-body">
-                                <h4 class="card-title">Website Views</h4>
-                                <p class="card-category">Last Campaign Performance</p>
-                              </div>
-                              <div class="card-footer">
-                                <div class="stats">
-                                  <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                          <div class="card card-chart">
-                              <div class="card-header card-header-rose">
-                              </div>
-                              <div class="card-body">
-                                <h4 class="card-title">Website Views</h4>
-                                <p class="card-category">Last Campaign Performance</p>
-                              </div>
-                              <div class="card-footer">
-                                <div class="stats">
-                                  <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                          <div class="card card-chart">
-                              <div class="card-header card-header-rose">
-                              </div>
-                              <div class="card-body">
-                                <h4 class="card-title">Website Views</h4>
-                                <p class="card-category">Last Campaign Performance</p>
-                              </div>
-                              <div class="card-footer">
-                                <div class="stats">
-                                  <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                       
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-               -->
 </body>
 
 </html>

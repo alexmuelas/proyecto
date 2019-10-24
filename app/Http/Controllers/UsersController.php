@@ -116,7 +116,16 @@ class UsersController extends Controller
     }
 
     public function edit_my_user(){
-        return view ('user.edit');
+        return view ('user.edit_user');
+    }
+
+    public function edit_user(User $user){
+
+        return view('user.edit', compact('user'));
+
+
+
+        // return view ('user.edit');
     }
 
     public function show_my_user(){
@@ -140,14 +149,49 @@ class UsersController extends Controller
 
 
 
-    // public function destroy(Category $category)
-    // {
-    //     $category->products()->update(['category_id' => null]);
+    public function update_user(Request $request, User $user)
+    {
+        // dd($request);
+        $this->validate($request, [
+            'name' => 'required | min:3 | max:200',
+            'user_name' => 'required | min:4 | max:200 |unique:users,user_name,'.$user->id,
+            // 'email' => 'required | email ',
+            'email' => 'required|email|unique:users,email,'.$user->id,
+            'money' => 'numeric|required|min:0|max:99999999',
 
-    //     $category->delete();
 
-    //     return redirect('admin/categories');
-    // }
+
+            // 'email' => ['required', 'email', Rule::unique('users', 'email')->ignore(auth()->user()->id)],
+            // 'user_name' => ['required', Rule::unique('users', 'user_name')->ignore(auth()->user()->id)],
+
+        ], [
+
+            'name.required' => 'El nombre es obligatorio',
+            'name.min' => 'El nombre ha de tener al menos 3 caracteres',
+            'name.max' => 'El nombre ha de tener como maximo 200 caracteres',
+            'user_name.required' => 'El nombre de usuario es obligatorio',
+            'user_name.min' => 'El nombre de usuario ha de tener al menos 5 caracteres',
+            'user_name.max' => 'El nombre de usuario ha de tener como maximo 200 caracteres',
+            'user_name.unique' => 'El nombre de usuario debe ser unico',
+            'email.required' => 'El email es obligatorio',
+            'email.email' => 'El email debe ser un email.',
+            'email.unique' => 'Ese email ya existe.',
+            'money.required' => 'El dinero es obligatorio',
+            'money.numeric' => 'El campo dinero solo admite numeros',
+
+
+
+        ]);
+        
+        // $user = User::findOrFail($id);
+        $user->name = $request->input('name');
+        $user->user_name = $request->input('user_name');
+        $user->email = $request->input('email');
+        $user->money = $request->input('money');
+        $user->save();
+
+        return redirect('home')->with('status', 'Profile updated!');
+    }
 
     public function table_users()
     {

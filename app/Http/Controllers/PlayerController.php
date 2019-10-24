@@ -103,7 +103,7 @@ class PlayerController extends Controller
         
         $players = Player::paginate(10);
 
-        return view ( 'player.table', compact ( 'players') );
+        return view ( 'player.table', compact ('players') );
     }
     
 }
