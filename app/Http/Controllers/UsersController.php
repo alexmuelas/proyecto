@@ -93,16 +93,16 @@ class UsersController extends Controller
 
         ], [
 
-            'name.required' => 'El nombre es obligatorio',
-            'name.min' => 'El nombre ha de tener al menos 3 caracteres',
-            'name.max' => 'El nombre ha de tener como maximo 200 caracteres',
-            'user_name.required' => 'El nombre de usuario es obligatorio',
-            'user_name.min' => 'El nombre de usuario ha de tener al menos 5 caracteres',
-            'user_name.max' => 'El nombre de usuario ha de tener como maximo 200 caracteres',
-            'user_name.unique' => 'El nombre de usuario debe ser unico',
-            'email.required' => 'El email es obligatorio',
-            'email.email' => 'El email debe ser un email.',
-            'email.unique' => 'Ese email ya existe.'
+            // 'name.required' => '{{ __("menu.name_required")}}',
+            // 'name.min' => 'El nombre ha de tener al menos 3 caracteres',
+            // 'name.max' => 'El nombre ha de tener como maximo 200 caracteres',
+            // 'user_name.required' => 'El nombre de usuario es obligatorio',
+            // 'user_name.min' => 'El nombre de usuario ha de tener al menos 5 caracteres',
+            // 'user_name.max' => 'El nombre de usuario ha de tener como maximo 200 caracteres',
+            // 'user_name.unique' => 'El nombre de usuario debe ser unico',
+            // 'email.required' => 'El email es obligatorio',
+            // 'email.email' => 'El email debe ser un email.',
+            // 'email.unique' => 'Ese email ya existe.'
 
         ]);
         
@@ -166,18 +166,18 @@ class UsersController extends Controller
 
         ], [
 
-            'name.required' => 'El nombre es obligatorio',
-            'name.min' => 'El nombre ha de tener al menos 3 caracteres',
-            'name.max' => 'El nombre ha de tener como maximo 200 caracteres',
-            'user_name.required' => 'El nombre de usuario es obligatorio',
-            'user_name.min' => 'El nombre de usuario ha de tener al menos 5 caracteres',
-            'user_name.max' => 'El nombre de usuario ha de tener como maximo 200 caracteres',
-            'user_name.unique' => 'El nombre de usuario debe ser unico',
-            'email.required' => 'El email es obligatorio',
-            'email.email' => 'El email debe ser un email.',
-            'email.unique' => 'Ese email ya existe.',
-            'money.required' => 'El dinero es obligatorio',
-            'money.numeric' => 'El campo dinero solo admite numeros',
+            // 'name.required' => 'El nombre es obligatorio',
+            // 'name.min' => 'El nombre ha de tener al menos 3 caracteres',
+            // 'name.max' => 'El nombre ha de tener como maximo 200 caracteres',
+            // 'user_name.required' => 'El nombre de usuario es obligatorio',
+            // 'user_name.min' => 'El nombre de usuario ha de tener al menos 5 caracteres',
+            // 'user_name.max' => 'El nombre de usuario ha de tener como maximo 200 caracteres',
+            // 'user_name.unique' => 'El nombre de usuario debe ser unico',
+            // 'email.required' => 'El email es obligatorio',
+            // 'email.email' => 'El email debe ser un email.',
+            // 'email.unique' => 'Ese email ya existe.',
+            // 'money.required' => 'El dinero es obligatorio',
+            // 'money.numeric' => 'El campo dinero solo admite numeros',
 
 
 

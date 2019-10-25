@@ -91,7 +91,7 @@ return [
     ],
     'not_in'               => ':attribute es inválido.',
     'not_regex'            => 'El formato del campo :attribute no es válido.',
-    'numeric'              => ':attribute debe ser numérico.',
+    'numeric'              => 'El :attribute debe ser numérico.',
     'present'              => 'El campo :attribute debe estar presente.',
     'regex'                => 'El formato de :attribute es inválido.',
     'required'             => 'El campo :attribute es obligatorio.',
@@ -151,7 +151,7 @@ return [
         'name'                  => 'nombre',
         'username'              => 'usuario',
         'user_name'             => 'nombre de usuario',
-        'name_myteam'             => 'nombre de equipo',
+        'name_myteam'           => 'nombre de equipo',
         'email'                 => 'correo electrónico',
         'first_name'            => 'nombre',
         'last_name'             => 'apellido',
@@ -181,5 +181,6 @@ return [
         'subject'               => 'asunto',
         'message'               => 'mensaje',
         'price'                 => 'precio',
+        'money'                 => 'dinero'
     ],
 ];

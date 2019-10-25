@@ -29,7 +29,8 @@ return [
     'delete' => "Eliminar",
     'cancel' => "Cancelar",
     'sure' => "¿Estas seguro que quieres eliminarlo?",
-    'name_myteam' =>"Nombre equipo"
+    'name_myteam' =>"Nombre equipo",
+    'name_required' => "El nombre es obligatorio"
 
 
 
