@@ -45,7 +45,32 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required | min:3 | max:200',
+            'user_name' => 'required | min:4 | max:200 |unique:users,user_name,',
+            // 'email' => 'required | email ',
+            'email' => 'required|email|unique:users,email,',
+            'money' => 'numeric|required|min:0|max:99999999',
+            'name_myteam' =>'required | min:4 | max:200 |unique:users,name_myteam,',
+            // 'password' => 'same:password_confirmation'
+            'password' => ['required', 
+            'min:6', 
+            'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%]).*$/', 
+            'confirmed']
+        
+            ]);
+
+            $user = new User();
+            $user->name = $request->input('name');
+            $user->user_name = $request->input('user_name');
+            $user->email = $request->input('email');
+            $user->money = $request->input('money');
+            $user->name_myteam = $request->input('name_myteam');
+            $user->password = bcrypt($request->input('password'));
+            $user->save();
+            return redirect('/users');
+        
+        
     }
 
     /**
@@ -199,6 +224,10 @@ class UsersController extends Controller
         $users = User::sortable ()->paginate ( 10 );
         return view ( 'user.table', compact ( 'users' ) );
 
+    }
+
+    public function new_user(){
+        return view ('user.new_user');
     }
 
     

@@ -30,7 +30,8 @@ return [
     'cancel' => "Cancel",
     'sure' => "Are you sure you want to delete it?",
     'name_myteam' =>"Name my team",
-    'name_required' => "The name is required"
+    'name_required' => "The name is required",
+    'new_user' => "New user"
 
 
 

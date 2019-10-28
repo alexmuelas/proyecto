@@ -32,8 +32,8 @@ Route::get('/users', 'UsersController@table_users')->name('users');
 Route::get('/editmyuser', 'UsersController@edit_my_user')->name('edit_my_user');
 Route::get('/showmyuser', 'UsersController@show_my_user')->name('show_my_user');
 Route::get('/user/{user}/edit', 'UsersController@edit_user')->name('edit_user');
-
-
+Route::get('/new_user', 'UsersController@new_user')->name('new_user');
+Route::post('/create_user', 'UsersController@store');
 
 Route::put('/usersedit', 'UsersController@update');
 Route::put('/user/{user}', 'UsersController@update_user');

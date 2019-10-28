@@ -15,6 +15,8 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
+                        <a href="{{ url('/new_user') }}" style ="color: white" class="btn btn-primary pull-right">{{ __('menu.new_user')}}</a>
+
                             <table class="table">
                                 <thead>
                                     <tr>

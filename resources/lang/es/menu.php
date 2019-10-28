@@ -30,7 +30,8 @@ return [
     'cancel' => "Cancelar",
     'sure' => "¿Estas seguro que quieres eliminarlo?",
     'name_myteam' =>"Nombre equipo",
-    'name_required' => "El nombre es obligatorio"
+    'name_required' => "El nombre es obligatorio",
+    'new_user' => "Nuevo usuario"
 
 
 
