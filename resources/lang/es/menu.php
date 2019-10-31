@@ -22,6 +22,7 @@ return [
     'options' =>"Opciones",
     'money' => "Dinero",
     'table_user' => "Tabla Usuarios",
+    'table_player' => "Tabla Jugadores",
     'owner' => "Propietario",
     'value' => "Valor Inicial",
     'position' => "Posicion",
@@ -31,7 +32,23 @@ return [
     'sure' => "¿Estas seguro que quieres eliminarlo?",
     'name_myteam' =>"Nombre equipo",
     'name_required' => "El nombre es obligatorio",
-    'new_user' => "Nuevo usuario"
+    'new_user' => "Nuevo usuario",
+    'new_player' => "Nuevo jugador",
+    'owner' => "Propietario",
+    'team' => "Equipo",
+    'dorsal' => "Dorsal",
+    'initial_value' => "Valor inicial",
+    'position' => "Posición",
+    'save' => "Guardar",
+    'choose_user' => "Elige un usuario",
+    'choose_team' => "Elige un equipo",
+    'choose_position' => "Elige una posicion",
+    'forward' => "Delantero",
+    'goalkeeper' => "Portero",
+    'defending' => "Defensa",
+    'midfield_player' => "Centrocampista",
+
+
 
 
 

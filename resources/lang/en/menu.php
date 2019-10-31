@@ -22,6 +22,7 @@ return [
     'options' =>"Options",
     'money' => "Money",
     'table_user' => "Table Users",
+    'table_player' => "Table Players",
     'owner' => "Owner",
     'value' => "Initial Value",
     'position' => "Position",
@@ -31,7 +32,24 @@ return [
     'sure' => "Are you sure you want to delete it?",
     'name_myteam' =>"Name my team",
     'name_required' => "The name is required",
-    'new_user' => "New user"
+    'new_user' => "New user",
+    'new_player' => "New player",
+    'owner' => "Owner",
+    'team' => "Team",
+    'dorsal' => "Dorsal",
+    'initial_value' => "Initial value",
+    'position' => "Position",
+    'save' => "Save",
+    'choose_user' => "Choose a user",
+    'choose_team' => "Choose a team",
+    'choose_position' => "Choose a position",
+    'forward' => "Forward",
+    'goalkeeper' => "Goalkeeper",
+    'defending' => "Defending",
+    'midfield_player' => "Midfield player",
+
+
+
 
 
 

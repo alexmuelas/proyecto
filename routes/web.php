@@ -46,8 +46,13 @@ Route::delete('/users/{user}', 'UsersController@destroy');
 
 //Tabla players
 Route::get('/player', 'PlayerController@table_player')->name('player');
+Route::get('/new_player', 'PlayerController@new_player')->name('new_player');
+Route::post('/create_player', 'PlayerController@store');
 
 
+
+
+Route::delete('/player/{player}', 'PlayerController@destroy');
 //Rutas de PayPal
 Route::post('paypal/confirm', 'ProductController@confirm')->name('paypal-confirm');
 Route::post('paypal/pay', 'PaypalController@payPaypal')->name('paypal-pay');

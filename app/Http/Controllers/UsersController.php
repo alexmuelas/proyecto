@@ -55,7 +55,7 @@ class UsersController extends Controller
             // 'password' => 'same:password_confirmation'
             'password' => ['required', 
             'min:6', 
-            'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%]).*$/', 
+            'regex:/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/', 
             'confirmed']
         
             ]);
@@ -221,7 +221,9 @@ class UsersController extends Controller
     public function table_users()
     {
 
-        $users = User::sortable ()->paginate ( 10 );
+        // $users = User::sortable ()->all();
+        $users = User::All();
+
         return view ( 'user.table', compact ( 'users' ) );
 
     }

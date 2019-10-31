@@ -32,11 +32,6 @@
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset ('js/material-dashboard.min.js?v=2.1.0')}}" type="text/javascript"></script>
 
-    
-
-
-    
-
     <script>
         (function (w, d, s, l, i) {
             w[l] = w[l] || [];
