@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Packs;
-use App\Player;
 use App\Team;
 use App\User;
+use App\Packs;
+use App\Player;
+use App\Position;
+use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
@@ -61,7 +62,7 @@ class PlayerController extends Controller
             $players->id_team = $request->input('team');
             $players->num_dorsal = $request->input('dorsal');
             $players->valor_inicial = $request->input('initial_value');
-            $players->position = $request->input('position');
+            $players->id_position = $request->input('position');
             $players->points = $request->input('points');
 
             $players->save();
@@ -136,18 +137,47 @@ class PlayerController extends Controller
 
         $owners = User::all();
         $teams = Team::all();
+        $positions = Position::all();
 
-        return view ('player.new_player', compact('owners','teams'));
+
+        return view ('player.new_player', compact('owners','teams','positions'));
         
     }
 
     public function edit_player(Player $player){
         $owners = User::all();
         $teams = Team::all();
+        $positions = Position::all();
 
-        return view('player.edit_player', compact('player','owners','teams'));
+        return view('player.edit_player', compact('player','owners','teams','positions'));
 
         // return view ('user.edit');
     }
     
+    public function update_player(Request $request, Player $player)
+    {
+        // dd($request);
+        $this->validate($request, [
+            'name' => 'required | min:3 | max:200',
+            'dorsal' => 'numeric|required|min:0|max:99',
+            'initial_value' => 'numeric|required|min:0|max:99999999',
+          
+        ], [
+
+
+
+        ]);
+        
+        $player->name = $request->input('name');
+        $player->id_user = $request->input('owner');
+        $player->id_team = $request->input('team');
+        $player->num_dorsal = $request->input('dorsal');
+        $player->valor_inicial = $request->input('initial_value');
+        $player->points = $request->input('points');
+        $player->id_position = $request->input('position');
+
+        $player->save();
+
+        return redirect('player')->with('status', 'Profile updated!');
+    }
 }

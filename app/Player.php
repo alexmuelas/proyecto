@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Player extends Model
 {
-    protected $fillable = ['id', 'name', 'id_user', 'id_team', 'num_dorsal', 'valor_inicial', 'position','points'];
+    protected $fillable = ['id', 'name', 'id_user', 'id_team', 'num_dorsal', 'valor_inicial', 'id_position','points'];
 
     public function team()
     {
@@ -29,7 +29,7 @@ class Player extends Model
 
     public function getPositionNameAttribute()
     {
-        $position = Position::where('id', $this->position)->first()->name;
+        $position = Position::where('id', $this->id_position)->first()->name;
 
         return $position;
     }

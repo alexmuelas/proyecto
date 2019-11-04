@@ -50,6 +50,7 @@ Route::get('/new_player', 'PlayerController@new_player')->name('new_player');
 Route::post('/create_player', 'PlayerController@store');
 Route::get('/player/{player}/edit', 'PlayerController@edit_player')->name('edit_player');
 
+Route::put('/player/{player}', 'PlayerController@update_player');
 
 
 

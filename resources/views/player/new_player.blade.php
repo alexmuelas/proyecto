@@ -107,13 +107,9 @@
 
                                         <select name="position" class="form-control">
 
-                                            <option value="0">{{ __('menu.choose_position')}}</option>
-                                            <option value="{{ __('menu.forward')}}">{{ __('menu.forward')}}</option>
-                                            <option value="{{ __('menu.goalkeeper')}}">{{ __('menu.goalkeeper')}}
-                                            </option>
-                                            <option value="{{ __('menu.defending')}}">{{ __('menu.defending')}}</option>
-                                            <option value="{{ __('menu.midfield_player')}}">
-                                                {{ __('menu.midfield_player')}}</option>
+                                        @foreach($positions as $position)
+                                            <option value="{{ $position->id }}">{{ $position->name }}</option>
+                                            @endforeach
 
 
                                         </select>

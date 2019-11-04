@@ -21,8 +21,10 @@
                             </ul>
                         </div>
                         @endif
-                        <form action="{{ url('/create_player/' ) }}" method="post" class="form">
+                        <form action="{{ url('/player/' . $player->id) }}" method="post" class="form">
                             @csrf
+                            @method('PUT')
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -116,7 +118,13 @@
 
                                         <select name="position" class="form-control">
                                         
-                                        <!-- $positions = array({{ __('menu.choose_position')}}, {{ __('menu.forward')}}, {{ __('menu.defending')}}, {{ __('menu.midfield_player')}}) -->
+                                        @foreach($positions as $position)
+                                            <option value="{{ $position->id }}" 
+                                            @if($player->id_position == old('position',
+                                                $position->id)) selected 
+                                                @endif
+                                                >{{ $position->name }}</option>
+                                            @endforeach
 
 
 
@@ -124,14 +132,13 @@
 
 
 
-
-                                            <option value="0">{{ __('menu.choose_position')}}</option>
+                                            <!-- <option value="0">{{ __('menu.choose_position')}}</option>
                                             <option value="{{ __('menu.forward')}}">{{ __('menu.forward')}}</option>
                                             <option value="{{ __('menu.goalkeeper')}}">{{ __('menu.goalkeeper')}}
                                             </option>
                                             <option value="{{ __('menu.defending')}}">{{ __('menu.defending')}}</option>
                                             <option value="{{ __('menu.midfield_player')}}">
-                                                {{ __('menu.midfield_player')}}</option>
+                                                {{ __('menu.midfield_player')}}</option> -->
 
 
                                         </select>

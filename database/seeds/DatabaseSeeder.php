@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
          $this->call(TeamTableSeeder::class);
          $this->call(PlayerTableSeeder::class);
          $this->call(PacksTableSeeder::class);
+         $this->call(PositionTableSeeder::class);
 
 
     }
