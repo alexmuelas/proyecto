@@ -140,5 +140,14 @@ class PlayerController extends Controller
         return view ('player.new_player', compact('owners','teams'));
         
     }
+
+    public function edit_player(Player $player){
+        $owners = User::all();
+        $teams = Team::all();
+
+        return view('player.edit_player', compact('player','owners','teams'));
+
+        // return view ('user.edit');
+    }
     
 }

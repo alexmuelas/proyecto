@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}"> -->
+
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -31,6 +37,8 @@
     <script src="{{ asset ('js/plugins/bootstrap-notify.js')}}"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset ('js/material-dashboard.min.js?v=2.1.0')}}" type="text/javascript"></script>
+
+    
 
     <script>
         (function (w, d, s, l, i) {

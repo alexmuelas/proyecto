@@ -19,7 +19,8 @@ class PlayerTableSeeder extends Seeder
                 factory ( Player::class, 1 )->create ([
                     'id_team' => $i,
                     'num_dorsal' => $j,
-                    'position' => 'Portero'
+                    'id_position' => '1'
+                    // Portero
 
                 ]);
             }
@@ -29,7 +30,8 @@ class PlayerTableSeeder extends Seeder
                 factory ( Player::class, 1 )->create ([
                     'id_team' => $i,
                     'num_dorsal' => $j,
-                    'position' => 'Delantero'
+                    'id_position' => '2'
+                    // Delantero
 
                 ]);
             }
@@ -39,7 +41,8 @@ class PlayerTableSeeder extends Seeder
                 factory ( Player::class, 1 )->create ([
                     'id_team' => $i,
                     'num_dorsal' => $j,
-                    'position' => 'Centrocampista'
+                    'id_position' => '3'
+                    // Centrocampista
 
                 ]);
             }
@@ -49,7 +52,8 @@ class PlayerTableSeeder extends Seeder
             factory ( Player::class, 1 )->create ([
                 'id_team' => $i,
                 'num_dorsal' => $j,
-                'position' => 'Defensa'
+                'id_position' => '4'
+                // Defensa
 
             ]);
             }

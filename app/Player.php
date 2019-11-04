@@ -27,4 +27,11 @@ class Player extends Model
         return $user;
     }
 
+    public function getPositionNameAttribute()
+    {
+        $position = Position::where('id', $this->position)->first()->name;
+
+        return $position;
+    }
+
 }

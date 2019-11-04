@@ -51,7 +51,7 @@
                                         <td>{{ $player->team_name}}</td>
                                         <td>{{ $player->num_dorsal}}</td>
                                         <td>{{ $player->valor_inicial}} &euro;</td>
-                                        <td>{{ $player->position}}</td>
+                                        <td>{{ $player->position_name}}</td>
                                         <td class="text-center">{{ $player->points}}</td>
 
 

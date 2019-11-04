@@ -27,7 +27,7 @@ class CreatePlayersTable extends Migration
 
             $table->integer('num_dorsal');
             $table->integer('valor_inicial');
-            $table->string('position');
+            $table->integer('id_position');
             $table->string('points')->nullable();
             $table->timestamps();
           
