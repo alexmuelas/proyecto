@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Hash;
 
 
 class UsersController extends Controller
@@ -148,9 +149,6 @@ class UsersController extends Controller
 
         return view('user.edit', compact('user'));
 
-
-
-        // return view ('user.edit');
     }
 
     public function show_my_user(){
@@ -185,26 +183,9 @@ class UsersController extends Controller
             'money' => 'numeric|required|min:0|max:99999999',
 
 
-
-            // 'email' => ['required', 'email', Rule::unique('users', 'email')->ignore(auth()->user()->id)],
-            // 'user_name' => ['required', Rule::unique('users', 'user_name')->ignore(auth()->user()->id)],
-
         ], [
 
-            // 'name.required' => 'El nombre es obligatorio',
-            // 'name.min' => 'El nombre ha de tener al menos 3 caracteres',
-            // 'name.max' => 'El nombre ha de tener como maximo 200 caracteres',
-            // 'user_name.required' => 'El nombre de usuario es obligatorio',
-            // 'user_name.min' => 'El nombre de usuario ha de tener al menos 5 caracteres',
-            // 'user_name.max' => 'El nombre de usuario ha de tener como maximo 200 caracteres',
-            // 'user_name.unique' => 'El nombre de usuario debe ser unico',
-            // 'email.required' => 'El email es obligatorio',
-            // 'email.email' => 'El email debe ser un email.',
-            // 'email.unique' => 'Ese email ya existe.',
-            // 'money.required' => 'El dinero es obligatorio',
-            // 'money.numeric' => 'El campo dinero solo admite numeros',
-
-
+        
 
         ]);
         
@@ -230,6 +211,36 @@ class UsersController extends Controller
 
     public function new_user(){
         return view ('user.new_user');
+    }
+
+    public function change_password(){
+        return view ('user.change_password');
+    }
+
+    public function updatePass(User $user, Request $request)
+    {
+        $oldpassword = bcrypt($request->input('oldpassword'));
+        $pass = Auth::user()->password;
+        
+        if( Hash::check($request->input('oldpassword'), $pass))
+        {
+            $this->validate($request, [
+                'password' => ['required', 
+                'min:6', 
+                'regex:/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/', 
+                'confirmed']
+            
+                ]);
+           
+
+            $user->password = bcrypt($request->input('password'));
+            $user->save();
+
+            return redirect('home')->with('message', ['success', 'Contraseña editada']);
+        }else{
+            return redirect('changepassword');
+        }
+
     }
 
     

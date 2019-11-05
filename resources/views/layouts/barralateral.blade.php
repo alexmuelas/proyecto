@@ -256,7 +256,7 @@ background-size:100% 100%;">
             <div class="sidebar-wrapper">
                 <div class="user">
                     <div class="photo">
-                        <img src="#" />
+                        <img src="url({{ asset('img/logo_alex_jugador_solo.jpg') }})" />
                     </div>
                     <div class="user-info">
                         <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -277,6 +277,13 @@ background-size:100% 100%;">
                                     <a class="nav-link" href="{{ url('/editmyuser') }}">
                                         <span class="sidebar-mini"> EP </span>
                                         <span class="sidebar-normal"> {{ __('menu.edit_my_profile') }} </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('/changepassword') }}">
+                                        <span class="sidebar-mini"> CP </span>
+                                        <span class="sidebar-normal"> {{ __('menu.change') }} </span>
                                     </a>
                                 </li>
                                 <!--  <li class="nav-item">

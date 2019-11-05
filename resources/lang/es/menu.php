@@ -47,6 +47,9 @@ return [
     'goalkeeper' => "Portero",
     'defending' => "Defensa",
     'midfield_player' => "Centrocampista",
+    'change' => "Cambiar contraseña",
+    'edit_profile' => "Editar perfil",
+    'complete_profile' => "Completa tu perfil"
 
 
 

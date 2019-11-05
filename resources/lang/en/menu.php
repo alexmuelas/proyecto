@@ -47,6 +47,9 @@ return [
     'goalkeeper' => "Goalkeeper",
     'defending' => "Defending",
     'midfield_player' => "Midfield player",
+    'change' => "Change password",
+    'edit_profile' => ">Edit Profile",
+    'complete_profile' => "Complete your profile"
 
 
 

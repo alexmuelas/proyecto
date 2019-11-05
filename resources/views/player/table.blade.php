@@ -1,6 +1,11 @@
 @extends('layouts.barralateral')
-@section('title', __('Welcome'))
+@section('title', 'Page Title')
 @section('content')
+
+
+
+
+
 
 
 

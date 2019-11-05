@@ -4,6 +4,6 @@ return [
     'name_email'   => 'Nombre/Email',
     'password'   => 'Contraseña',
     'password2'   => 'Repite Contraseña',
-
+    'old_password'   => 'Contraseña antigua'
    
 ];

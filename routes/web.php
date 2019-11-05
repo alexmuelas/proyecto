@@ -41,6 +41,10 @@ Route::put('/user/{user}', 'UsersController@update_user');
 
 Route::delete('/users/{user}', 'UsersController@destroy');
 
+Route::get('/changepassword', 'UsersController@change_password')->name('change_password');
+Route::put('/user/{user}', 'UsersController@updatePass')->name('actualizarPass');
+
+
 
 
 
