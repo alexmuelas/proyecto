@@ -1,5 +1,5 @@
-@extends('layouts.app')
-
+@extends('layouts.barralateral')
+@section('title', __('Welcome'))
 @section('content')
 
 <div class="container">

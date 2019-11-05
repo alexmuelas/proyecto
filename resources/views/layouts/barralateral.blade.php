@@ -256,7 +256,8 @@ background-size:100% 100%;">
             <div class="sidebar-wrapper">
                 <div class="user">
                     <div class="photo">
-                        <img src="url({{ asset('img/logo_alex_jugador_solo.jpg') }})" />
+                        <img style="height: 40px" src="img/logo_alex_jugador_solo.jpg" />
+                        
                     </div>
                     <div class="user-info">
                         <a data-toggle="collapse" href="#collapseExample" class="username">
