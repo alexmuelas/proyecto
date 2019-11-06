@@ -30,11 +30,7 @@
         <hr>
 
 
-        <!-- <form action="{{ route('descargarFactura') }}" method="POST">
-            @csrf
-            <input type="hidden" name="producto" value="{{$pack->id}}">
-            <button type="submit" class="btn btn-success btn-icon btn-sm">Descargar factura</button>
-        </form> -->
+        
 
     </div>
 </div>

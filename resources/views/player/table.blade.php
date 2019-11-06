@@ -1,5 +1,5 @@
 @extends('layouts.barralateral')
-@section('title', 'Page Title')
+@section('title', 'Jugadores')
 @section('content')
 
 
