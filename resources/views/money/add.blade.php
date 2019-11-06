@@ -5,7 +5,7 @@
 <div class="container">
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto text-center">
-            <h2 class="title">Pick the best plan for you</h2>
+            <h2 class=""  style="color:white;">{{ __('menu.plan')}}</h2>
           </div>
         </div>
 
@@ -20,11 +20,11 @@
                 <div class="card-icon  icon-rose ">
                   <i class="material-icons"> {{$pack->logo}}</i>
                 </div>
-                <h3 class="card-title text-warning">+{{$pack->money}} monedas</h3>
+                <h3 class="card-title text-warning">+{{$pack->money}} {{ __('menu.coin')}}</h3>
                 <h3 class="card-title"> {{$pack->price}}€</h3>
               </div>
               <div class="card-footer justify-content-center ">
-              <a href="{{ url('/packs/' . $pack->id . '/comprar')}}" class="btn btn-round btn-rose">Comprar</a>
+              <a href="{{ url('/packs/' . $pack->id . '/comprar')}}" class="btn btn-round btn-rose">{{ __('menu.buy')}}</a>
               </div>
             </div>
           </div>

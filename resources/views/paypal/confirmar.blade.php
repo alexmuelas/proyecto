@@ -1,3 +1,7 @@
+@extends('layouts.barralateral')
+@section('title', 'Page Title')
+@section('content')
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -66,33 +70,29 @@
 <body>
 
 <div class="row">
-    <div class="col-md-6">
-        <div class="imagen">
-        <!-- Insertar logo -->
-            <img src="#" alt="Logo Comunio">
+          <div class="col-md-6 ml-auto mr-auto text-center">
+            <h2 class=""  style="color:white;">{{ __('menu.purchase')}}</h2>
+          </div>
         </div>
-    </div>
-</div>
-
 
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
         <div class="card">
             <div class="card-title">
-                <h5 class="text-center">Estas a punto de realizar una compra de monedas en Comunio</h5>
+                <h5 class="text-center"></h5>
             </div>
             <div class="card-body  align-items-center d-flex justify-content-center">
                 <table class="tabla text-center">
                     <tr>
-                        <th class="titulo">Nombre</th>
-                        <th class="titulo">Monedas</th>
-                        <th class="titulo">Precio</th>
+                        <th class="titulo">{{ __('menu.name')}}</th>
+                        <th class="titulo">{{ __('menu.coin2')}}</th>
+                        <th class="titulo">{{ __('menu.price')}}</th>
                     </tr>
                     <tr>
-                        <td>{{ $pack->name }}</td>
-                        <td>{{ $pack->money }}</td>
-                        <td>{{ $pack->price }}€</td>
+                        <td><h4>{{ $pack->name }}</h4></td>
+                        <td><h4>{{ $pack->money }}</h4></td>
+                        <td><h4>{{ $pack->price }}€</h4></td>
                     </tr>
                 </table>
             </div>
@@ -112,20 +112,22 @@
 
             <input class="form-group" hidden name="amount" type="number" value="{{$pack->price}}">
             <input class="form-group" hidden name="name" type="text" value="{{$pack->name}}">
-            <input type="submit" class="btn btn-info" value="Confirmar">
+            <input type="submit" class="btn" style="background: #e91e63; color:white" value="{{ __('menu.confirm')}}">
         </form>
         <br>
-        <a class="btn btn-danger" href="#">Cancelar</a>
+        <a class="btn btn-danger" href="#">{{ __('menu.cancel')}}</a>
         <br><br><br><br><br>
     </div>
 </div>
 
-<footer>
+<!-- <footer>
 
     <div class="informacion-footer">
         <p>Comunio España</p>
     </div>
 
-</footer>
+</footer> -->
 </body>
 </html>
+
+@endsection

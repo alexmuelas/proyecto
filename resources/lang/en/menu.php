@@ -49,7 +49,15 @@ return [
     'midfield_player' => "Midfield player",
     'change' => "Change password",
     'edit_profile' => ">Edit Profile",
-    'complete_profile' => "Complete your profile"
+    'complete_profile' => "Complete your profile",
+    'plan' => "Pick the best plan for you",
+    'coin' => "coins",
+    'coin2' => "Coins",
+    'price' => "Price",
+    'buy' => "Buy",
+    'purchase' => "You are about to make a purchase of coins in Football Player",
+    'confirm' => "Confirm"
+
 
 
 

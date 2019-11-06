@@ -49,7 +49,14 @@ return [
     'midfield_player' => "Centrocampista",
     'change' => "Cambiar contraseña",
     'edit_profile' => "Editar perfil",
-    'complete_profile' => "Completa tu perfil"
+    'complete_profile' => "Completa tu perfil",
+    'plan' => "Elige el mejor plan para ti",
+    'coin' => "monedas",
+    'coin2' => "Monedas",
+    'buy' => "Comprar",
+    'price' => "Precio",
+    'purchase' => "Estas a punto de realizar una compra de monedas en Football Player",
+    'confirm' => "Confirmar"
 
 
 
