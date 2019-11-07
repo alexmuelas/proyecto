@@ -14,7 +14,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -38,7 +38,7 @@
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset ('js/material-dashboard.min.js?v=2.1.0')}}" type="text/javascript"></script>
 
-    
+
 
     <script>
         (function (w, d, s, l, i) {
@@ -309,39 +309,61 @@
                     </ul>
                 </div>
                 @else
-                <!-- <div>
-                            <li class="nav-item ">
-                                <a>
-                                    {{ Auth::user()->user_name }} <span class="caret"></span>
-                                </a>
-                            </li>
 
-                        </div>
+                <div class="navbar-wrapper">
+                    <i class="material-icons">
+                        home
+                    </i>
+                    <a class="navbar-brand" href="home">Football Player</a>
+                </div>
+        
 
-                        <div>
-                            <li class="nav-item" style="padding: 5px">
-                                
-                                    {{ Auth::user()->money }} <span class="caret">
-                                    <i class="material-icons">euro_symbol</i>
-                                    <i class="material-icons">add_circle_outline</i>
-                                    </span>
-                                
-                            </li>
-                        </div>
-                        <div>
-                            <a class="nav-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();" style= "color: black; padding: 5px">
-                                {{ __('Logout') }}
+
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+
+
+                    
+
+
+
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">home</i> {{ Auth::user()->name }}
+
                             </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div> -->
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a href="home" class="dropdown-item">
+                                    Dashboard
+                                </a>
+
+                                <!-- <a href="home" class="dropdown-item">
+                                    {{ __('menu.spain') }}
+                                </a> -->
+
+                                <a href="users" class="dropdown-item">
+                                    {{ __('menu.user') }}
+                                </a>
+
+                                <a href="player" class="dropdown-item">
+                                    {{ __('menu.player') }}
+                                </a>
+                                
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+               
+             
 
                 @endguest
 
-                <!-- </ul>
-                </div> -->
+              
             </div>
         </nav>
 

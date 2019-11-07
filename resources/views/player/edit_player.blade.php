@@ -1,5 +1,5 @@
 @extends('layouts.barralateral')
-@section('title', __('Welcome'))
+@section('title', __('menu.edit_player'))
 @section('content')
 
 <div class="content text-center">
@@ -9,7 +9,6 @@
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">{{ __('menu.new_player') }}</h4>
-                        <!-- <p class="card-category">Complete your profile</p> -->
                     </div>
                     <div class="card-body">
                         @if($errors->any())
@@ -149,8 +148,10 @@
 
 
 
-                            <button type="submit" class="btn btn-primary pull-right">{{ __('menu.save')}}</button>
+                            <button type="submit" class="btn btn-primary">{{ __('menu.save')}}</button>
+                            <a href="{{ url('/player') }}" class="btn btn-danger">{{ __('menu.cancel')}}</a>
                             <div class="clearfix"></div>
+
                         </form>
                     </div>
                 </div>

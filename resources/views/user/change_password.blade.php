@@ -1,9 +1,6 @@
 @extends('layouts.barralateral')
 @section('content')
-
-
-@section('title', 'Page Title')
-<head> <title>App Name - @yield('title')</title> </head>
+@section('title', __('menu.change'))
 
 
 <div class="content text-center">
@@ -56,7 +53,9 @@
                     </div>
                     
                     
-                    <button type="submit" class="btn btn-primary pull-right">{{ __('menu.save')}}</button>
+                    <button type="submit" class="btn btn-primary">{{ __('menu.save')}}</button>
+                    <a href="{{ url('/home') }}" class="btn btn-danger">{{ __('menu.cancel')}}</a>
+
                     <div class="clearfix"></div>
                   </form>
                 </div>

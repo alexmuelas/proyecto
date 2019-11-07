@@ -15,10 +15,10 @@
 <body>
 <div class="card">
     <div class="card-header">
-        <h1 class="text-center">COMUNIO</h1>
+        <h1 class="text-center">FOOTBALL PLAYER</h1>
         <hr>
-        <p>Hola {{ $user->name }}.</p>
-        <p>Gracias por comprar en Comunio</p>
+        <p>Hola {{ $vendedor->name }}.</p>
+        <p>Enhorabuena, por tu compra en <b>Football Player</b></p>
     </div>
     <div class="card-body">
         <h4>Datos del producto:</h4>
@@ -30,7 +30,8 @@
         <hr>
 
 
-        
+        <p>Gracias por comprar en Football Player</p>
+
 
     </div>
 </div>

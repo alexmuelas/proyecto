@@ -1,5 +1,5 @@
 @extends('layouts.barralateral')
-@section('title', __('Welcome'))
+@section('title', __('menu.table_user'))
 @section('content')
 
 
@@ -113,7 +113,7 @@ data-target="#modalAddToCart"
     </div>
 </div>
 
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<!-- <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
 
 <link href="    https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 
@@ -122,7 +122,7 @@ data-target="#modalAddToCart"
         $('#example').DataTable();
     });
 
-</script>
+</script> -->
 
 
 

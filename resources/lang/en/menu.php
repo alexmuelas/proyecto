@@ -5,22 +5,28 @@ return [
     'english'    => 'English',
     'login'      => 'Login',
     'register'   => 'Register',
+    'verify' => "Verify account",
     'category'   => 'Manage Categories',
     'product'   => 'Manage Products',
     'title' => 'My store of products',
     'my_profile' => "My Profile",
-    'edit_my_profile' => "Edit Profile",
+    'edit_my_profile' => "Edit my profile",
     'team' => "Team",
     'name_myteam' => "Name Team",
     'edit_team' => "Edit Team",
     'bid' => "Bids",
     'edit.bid' => "Edit Bids",
+    'edit_player' => "Edit player",
+    'edit_user' => "Edit user",
+    'perfil' => "Profile",
+    'new_player' => "New player",
     'clasification' =>"Clasification",
     'user' =>"User",
     'player' =>"Player",
     'name' =>"Name",
     'options' =>"Options",
     'money' => "Money",
+    'add_money' => "Add Money",
     'table_user' => "Table Users",
     'table_player' => "Table Players",
     'owner' => "Owner",
@@ -56,7 +62,9 @@ return [
     'price' => "Price",
     'buy' => "Buy",
     'purchase' => "You are about to make a purchase of coins in Football Player",
-    'confirm' => "Confirm"
+    'confirm' => "Confirm",
+    'confirm_buy' => "Confirm buy"
+
 
 
 

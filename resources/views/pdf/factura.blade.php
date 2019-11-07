@@ -66,7 +66,7 @@
         <div class="col-md-6">
             <div class="imagen">
             <!-- Falta insertar logo -->
-                <!-- <img src="{{ public_path('img/logo-.jpg') }}" alt="Logo Comunio"> -->
+                <img src="{{ public_path('img/logo_alex.jpg') }}" alt="Logo">
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@
         <img src="" width="10%" alt="Logo Comunio">
     </div>
     <div class="informacion-footer">
-        <p>Comunio España</p>
+        <p>Football Player España</p>
     </div>
 
 </footer>

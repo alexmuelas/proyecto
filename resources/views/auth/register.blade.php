@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', __('menu.register'))
+
 @section('content')
 
 <div class="container">

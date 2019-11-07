@@ -1,5 +1,5 @@
 @extends('layouts.barralateral')
-@section('title', __('Welcome'))
+@section('title', __('menu.perfil'))
 @section('content')
 
 <div class="content text-center">

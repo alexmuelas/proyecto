@@ -1,5 +1,5 @@
 @extends('layouts.barralateral')
-@section('title', __('Welcome'))
+@section('title', __('menu.edit_user'))
 @section('content')
 
 <div class="content text-center">
@@ -9,7 +9,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">{{ __('menu.edit_profile') }}</h4>
-                  <p class="card-category">{{ __('menu.complete_profile') }}</p>
+                  <!-- <p class="card-category">{{ __('menu.complete_profile') }}</p> -->
                 </div>
                 <div class="card-body">
                 @if($errors->any())
@@ -58,7 +58,9 @@
                     </div>
                     
                     
-                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <button type="submit" class="btn btn-primary">{{ __('menu.save')}}</button>
+                    <a href="{{ url('/users') }}" class="btn btn-danger">{{ __('menu.cancel')}}</a>
+
                     <div class="clearfix"></div>
                   </form>
                 </div>

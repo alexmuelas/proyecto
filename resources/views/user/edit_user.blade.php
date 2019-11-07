@@ -1,5 +1,5 @@
 @extends('layouts.barralateral')
-@section('title', __('Welcome'))
+@section('title', __('menu.edit_my_profile'))
 @section('content')
 
 <div class="content text-center">
@@ -49,7 +49,9 @@
                     </div>
                     
                     
-                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <button type="submit" class="btn btn-primary pull-right">{{ __('menu.save')}}</button>
+                    <a href="{{ url('/home') }}" class="btn btn-danger">{{ __('menu.cancel')}}</a>
+
                     <div class="clearfix"></div>
                   </form>
                 </div>
