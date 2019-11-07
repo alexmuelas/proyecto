@@ -266,7 +266,7 @@ background-size:100% 100%;">
             <div class="sidebar-wrapper">
                 <div class="user">
                     <div class="photo">
-                        <img style="height: 40px" src="img/logo_alex_jugador_solo.jpg" />
+                        <img style="height: 40px" src="http://proyectocomunio.local/img/logo_alex_jugador_solo.jpg" />
                         
                     </div>
                     <div class="user-info">

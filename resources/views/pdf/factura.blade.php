@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-        .imagen {
+        /* .imagen {
             width: 50%;
         }
         .imagen img {
             max-width: 100%;
-        }
+        } */
 
         table {
             text-align: right;
@@ -66,31 +66,33 @@
         <div class="col-md-6">
             <div class="imagen">
             <!-- Falta insertar logo -->
-                <img src="{{ public_path('img/logo_alex.jpg') }}" alt="Logo">
+                <img src="{{ public_path('img/logo_alex.jpg') }}" style="width:100%;" alt="Logo">
             </div>
         </div>
     </div>
-
-    <h5>Datos de facturación</h5>
+<br>
+<br>
+    <h3>Datos de facturación</h3>
     <ul>
-        <li>Nombre y apellidos: {{ $comprador->name }}</li>
-        <li>Email: {{ $comprador->email }}</li>
+        <li><strong> Nombre:</strong> {{ $comprador->name }}</li>
+        <li><strong>Email:</strong> {{ $comprador->email }}</li>
+        <li><strong>Fecha compra:</strong>     {{ \Carbon\Carbon::now()->format('d/m/Y') }}</li>
+
     </ul>
     <br><br>
-    <h5>Datos del producto</h5>
+    <h3>Datos del producto</h3>
     <table class="tabla">
         <tr>
-            <th class="titulo">Nombre</th>
-            <th class="titulo">Monedas</th>
-            <th class="titulo">Precio</th>
+            <th class="titulo text-center">Nombre</th>
+            <th class="titulo text-center">Monedas</th>
+            <th class="titulo text-center">Precio</th>
         </tr>
         <tr>
-            <td>{{ $pack->name }}</td>
-            <td>{{ $pack->money }}</td>
-            <td>{{ $pack->price }}</td>
+            <td class="text-center">{{ $pack->name }}</td>
+            <td class="text-center">{{ $pack->money }}</td>
+            <td class="text-center">{{ $pack->price }}€</td>
         </tr>
     </table>
-
 
 
 <footer>

@@ -17,7 +17,7 @@
     <div class="card-header">
         <h1 class="text-center">FOOTBALL PLAYER</h1>
         <hr>
-        <p>Hola {{ $vendedor->name }}.</p>
+        <p>Hola {{ Auth::user()->user_name }}.</p>
         <p>Enhorabuena, por tu compra en <b>Football Player</b></p>
     </div>
     <div class="card-body">
