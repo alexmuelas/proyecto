@@ -28,6 +28,9 @@ class CreatePlayersTable extends Migration
             $table->integer('num_dorsal');
             $table->integer('valor_inicial');
             $table->integer('id_position');
+            $table->boolean('titular')->default('0');
+            //0 No es titular, 1 es titular
+            $table->integer('goals')->default('0');
             $table->string('points')->nullable();
             $table->timestamps();
           

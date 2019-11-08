@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->boolean('admin')->default(false);
             $table->string('name_myteam')->nullable();
-            $table->integer('id_clan')->nullable();
+            $table->integer('points_myteam')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
