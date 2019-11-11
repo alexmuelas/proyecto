@@ -11,7 +11,7 @@
 
                 <div class="card-body">
 
-                <p>Hola {{ $user->name }}, bienvenido a Football Player</p>
+                <p>Hola {{ Auth::user()->user_name }}, bienvenido a Football Player</p>
 
                 <p>¡Espero que disfrutes!</p>
 
