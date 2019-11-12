@@ -1,3 +1,24 @@
+-------EVENTO NADA MAS REGISTRARTE------
+
+Nos vamos a app\Providers\EventsServiceProvider.php
+
+Nos aseguramos que este descomentado:
+
+ protected $listen = [
+         'Illuminate\Auth\Events\Verified' => [
+             'App\Listeners\LogVerifiedUser',
+        ],
+
+        
+    ];
+
+Ejecutamos el comando php artisan event:generate el cual nos genera el siguiente archivo app\Listeners\LogVerifiedUser.php
+dentro de ese archivo en el _constructor hacemos la llamada a la BBDD que queremos que se ejecute cuando el usuario que se
+acaba de registrar acepta el correo de verificacion que se le manda. 
+
+
+-------CREACION EVENTOS-------
+
 Lo primero de todo es editar el crontab
 -crontab -e
 
