@@ -63,7 +63,11 @@ return [
     'buy' => "Buy",
     'purchase' => "You are about to make a purchase of coins in Football Player",
     'confirm' => "Confirm",
-    'confirm_buy' => "Confirm buy"
+    'confirm_buy' => "Confirm buy",
+    'add_goals' => "Add goals",
+    'amount_goals' => "Number of goals",
+    'goals' => "Goals",
+    'titular' => "Headline"
 
 
 

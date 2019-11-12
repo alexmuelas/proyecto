@@ -180,4 +180,22 @@ class PlayerController extends Controller
 
         return redirect('player')->with('status', 'Profile updated!');
     }
+
+
+    public function goals(Request $request, Player $player)
+    {
+        $cantidad = $request->quantity;
+
+        $id = $request->user_id;
+
+                $player = Player::find($id);
+
+                $player->goals = $cantidad;
+                //dd($request);
+                $player->save();
+
+            return redirect('player');
+
+
+    }
 }

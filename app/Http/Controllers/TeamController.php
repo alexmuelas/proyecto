@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Player;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TeamController extends Controller
 {
@@ -80,5 +82,15 @@ class TeamController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function table_team()
+    {
+        
+        // $players = Player::paginate(10);
+
+        $players = Player::All()->Where('id_user', Auth::user()->id);
+
+        return view ( 'team.team', compact ('players') );
     }
 }

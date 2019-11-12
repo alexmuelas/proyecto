@@ -281,5 +281,17 @@ class UsersController extends Controller
 
     }
 
+
+
+    public function clasification()
+    {
+
+        // $users = User::sortable ()->all();
+        $users = User::All();
+
+        return view ( 'clasification.clasification', compact ( 'users' ) );
+
+    }
+
     
 }

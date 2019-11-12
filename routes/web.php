@@ -47,7 +47,11 @@ Route::get('/changepassword', 'UsersController@change_password')->name('change_p
 Route::put('/user/{user}', 'UsersController@updatePass')->name('actualizarPass');
 
 
+//Tabla Clasificacion
+Route::get('/clasification', 'UsersController@clasification')->name('clasification');
 
+//Team
+Route::get('/team', 'TeamController@table_team')->name('team');
 
 
 //Tabla players
@@ -57,6 +61,8 @@ Route::post('/create_player', 'PlayerController@store');
 Route::get('/player/{player}/edit', 'PlayerController@edit_player')->name('edit_player');
 
 Route::put('/player/{player}', 'PlayerController@update_player');
+
+Route::post('/add', 'PlayerController@goals');
 
 
 

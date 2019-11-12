@@ -42,6 +42,20 @@
         $('#example').DataTable();
     });
 
+    $(document).ready(function () {
+        $('#example2').DataTable( {
+        order: [ 5, 'desc' ]
+    } );
+    });
+
+    $(document).ready(function () {
+        $('#example3').DataTable( {
+        order: [ 7, 'desc' ]
+    } );
+    });
+
+    
+
 </script>
 
     <script>
@@ -327,7 +341,7 @@ background-size:100% 100%;">
                         <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="../examples/pages/pricing.html">
+                                    <a class="nav-link" href="{{ url('/team') }}">
                                         <!-- <span class="sidebar-mini"> P </span> -->
                                         <span class="sidebar-normal"> {{ __('menu.team') }} </span>
                                     </a>
@@ -371,7 +385,7 @@ background-size:100% 100%;">
 
                     
                     <li class="nav-item ">
-                        <a class="nav-link" href="../examples/forms/regular.html">
+                        <a class="nav-link" href="{{ url('/clasification') }}">
                             <i class="material-icons">date_range</i>
                             <span class="sidebar-normal"> {{ __('menu.clasification') }} </span>
                         </a>

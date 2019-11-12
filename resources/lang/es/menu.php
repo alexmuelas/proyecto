@@ -63,7 +63,11 @@ return [
     'price' => "Precio",
     'purchase' => "Estas a punto de realizar una compra de monedas en Football Player",
     'confirm' => "Confirmar",
-    'confirm_buy' => "Confirmar compra"
+    'confirm_buy' => "Confirmar compra",
+    'add_goals' => "Añadir goles",
+    'amount_goals' => "Cantidad de goles",
+    'goals' => "Goles",
+    'titular' => "Titular"
 
 
 

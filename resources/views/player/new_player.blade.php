@@ -69,7 +69,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
-                                        {{ __('menu.dorsal')}}:<input type="text" class="form-control"
+                                        {{ __('menu.dorsal')}}:<input type="number"  min="0"class="form-control"
                                             value="{{ old('dorsal') }}" name="dorsal">
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
-                                        {{ __('menu.initial_value')}}:<input type="text" class="form-control"
+                                        {{ __('menu.initial_value')}}:<input type="number" min="0" class="form-control"
                                             value="{{ old('initial_value') }}" name="initial_value">
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
-                                        {{ __('menu.points')}}:<input type="text" class="form-control"
+                                        {{ __('menu.points')}}:<input type="number" min="0" class="form-control"
                                             value="{{ old('points') }}" name="points">
                                     </div>
                                 </div>

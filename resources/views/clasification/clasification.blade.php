@@ -21,7 +21,7 @@
 
 
 
-                            <table id="example" class="display" style="width:100%">
+                            <table id="example2" class="display" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th class="text-center">#</th>
@@ -30,7 +30,6 @@
                                         <th>Email</th>
                                         <th>{{ __('menu.name_myteam') }}</th>
                                         <th>{{ __('menu.money') }}</th>
-                                        <th>{{ __('menu.options') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -43,49 +42,8 @@
                                         <td>{{ $user->user_name}}</td>
                                         <td>{{ $user->email}}</td>
                                         <th>{{ $user->name_myteam}}</th>
-                                        <td class="text-left">{{ $user->money}} &euro;</td>
-                                        <td class="td-actions text-right">
-                                            <a type="button" rel="tooltip" class="btn btn-success btn-round btn-sm"
-                                                href="{{ url('/user/' . $user->id . '/edit' ) }}">
-                                                <i style="font-size: 1em;  width:6; height:6;" class="material-icons">edit</i>
-                                            </a>
-
-
-
-                                            <!-- FUNCIONA -->
-                                            <!-- <form action="{{ url('/users/' . $user->id) }}" method="post"
-            class="d-inline-block">
-            @csrf
-            @method('DELETE')
-            <button type="submit" rel="tooltip" title="Eliminar"
-                class="btn btn-danger btn-simple btn-sm">
-                <i class="fa fa-times"></i>
-            </button>
-        </form> -->
-
-                                            <!-- ------------------------------------------- -->
-
-
-                                            <!-- <button class="btn btn-primary btn-round" data-toggle="modal"
-data-target="#modalAddToCart"
->
-<i class="fa fa-cart-plus"></i> E
-</button> -->
-
-                                            @if($user->id != Auth::user()->id)
-                                                <button type="submit" rel="tooltip" class="btn btn-danger btn-simple btn-sm"
-                                                    data-toggle="modal" data-target='#modalAddToCart{{$user->id }}'>
-                                                    <i class="fa fa-times fa-5x"></i>
-                                                </button>
-                                            @endif
-                                            <!-- ------------------------------------------- -->
-
-
-                                        </td>
-
-                                    </tr>
-                                    @include('partials.delete_user')
-
+                                        <td class="text-left">{{ $user->points_myteam}}</td>
+                                        
                                     @endforeach
 
 
@@ -97,8 +55,7 @@ data-target="#modalAddToCart"
                                         <th>User Name</th>
                                         <th>Email</th>
                                         <th>{{ __('menu.name_myteam') }}</th>
-                                        <th>{{ __('menu.money') }}</th>
-                                        <th>{{ __('menu.options') }}</th>
+                                        <th>{{ __('menu.points_myteam') }}</th>
                                     </tr>
                                 </tfoot>
                             </table>
