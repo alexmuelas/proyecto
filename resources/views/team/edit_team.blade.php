@@ -3,7 +3,7 @@
 @section('content')
 
 
-
+<br>
 <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -17,8 +17,18 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                        
-                            <table id="example3" class="display" style="width:100%">
+                            <!-- <a href="{{ url('/new_player') }}" style="color: white; margin: 0px 0px 20px 0px"
+                                class="btn btn-primary pull-right">{{ __('menu.new_player')}}</a> -->
+
+                                <a class="btn btn-primary btn-round btn-sm pull-right" data-toggle="modal"
+                                            data-target="#modalAddToProduct" id=""
+                                            title="{{ __('menu.add_goals')}}"
+                                    >
+                                    <i style="font-size: 1em;  width:6; height:6;"
+                                                    class="material-icons">sports_soccer</i> </a>
+                                                    @include('partials.add_to_alineacion')
+
+                            <table id="example4" class="display" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th class="text-center">#</th>
@@ -30,6 +40,8 @@
                                         <th>{{ __('menu.goals') }}</th>
                                         <th>{{ __('menu.titular') }}</th>
                                         <th>{{ __('menu.points') }}</th>
+                                        <th>{{ __('menu.options') }}</th>
+
 
                                     </tr>
                                 </thead>
@@ -74,6 +86,8 @@
                                         <th class="text-right">{{ __('menu.goals') }}</th>
                                         <th class="text-right">{{ __('menu.titular') }}</th>
                                         <th class="text-right">{{ __('menu.points') }}</th>
+                                        <th>{{ __('menu.options') }}</th>
+
                                     </tr>
                                 </tfoot>
                             </table>

@@ -52,6 +52,10 @@ Route::get('/clasification', 'UsersController@clasification')->name('clasificati
 
 //Team
 Route::get('/team', 'TeamController@table_team')->name('team');
+Route::get('/edit_team', 'TeamController@table_edit_team')->name('edit_team');
+Route::post('/add_position', 'TeamController@add_position');
+
+
 
 
 //Tabla players

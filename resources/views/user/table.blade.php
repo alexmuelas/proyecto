@@ -72,12 +72,11 @@ data-target="#modalAddToCart"
 <i class="fa fa-cart-plus"></i> E
 </button> -->
 
-                                            @if($user->id != Auth::user()->id)
                                                 <button type="submit" rel="tooltip" class="btn btn-danger btn-simple btn-sm"
                                                     data-toggle="modal" data-target='#modalAddToCart{{$user->id }}'>
                                                     <i class="fa fa-times fa-5x"></i>
                                                 </button>
-                                            @endif
+                                            
                                             <!-- ------------------------------------------- -->
 
 

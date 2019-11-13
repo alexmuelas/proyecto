@@ -50,7 +50,15 @@
 
     $(document).ready(function () {
         $('#example3').DataTable( {
-        order: [ 7, 'desc' ]
+        order: [ 7, 'desc' ],
+        "iDisplayLength": 25
+    } );
+    });
+
+    $(document).ready(function () {
+        $('#example4').DataTable( {
+        // order: [ 7, 'desc' ],
+        "iDisplayLength": 25
     } );
     });
 
@@ -349,7 +357,7 @@ background-size:100% 100%;">
                             </ul>
                             <ul class="nav">
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="../examples/pages/pricing.html">
+                                    <a class="nav-link" href="{{ url('/edit_team') }}">
                                         <!-- <span class="sidebar-mini"> P </span> -->
                                         <span class="sidebar-normal"> {{ __('menu.edit_team') }} </span>
                                     </a>
