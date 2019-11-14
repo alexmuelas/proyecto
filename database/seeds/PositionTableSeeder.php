@@ -18,7 +18,7 @@ class PositionTableSeeder extends Seeder
         ]);
         Position::create ( [
             'id' => '2',
-            'name' => 'Delantero'
+            'name' => 'Defensa'
         ]);
         Position::create ( [
             'id' => '3',
@@ -26,7 +26,7 @@ class PositionTableSeeder extends Seeder
         ]);
         Position::create ( [
             'id' => '4',
-            'name' => 'Defensa'
+            'name' => 'Delantero'
         ]);
 
     }

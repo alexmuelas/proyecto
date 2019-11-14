@@ -76,7 +76,7 @@
                                             title="{{ __('menu.add_goals')}}"
                                     >
                                     <i style="font-size: 1em;  width:6; height:6;"
-                                                    class="material-icons">sports_soccer</i>                                    </button>
+                                                    class="material-icons">sports_soccer</i>  </button>                                   </button>
 
                                         </td>
 

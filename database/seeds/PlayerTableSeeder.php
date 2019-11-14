@@ -26,19 +26,19 @@ class PlayerTableSeeder extends Seeder
                 ]);
             }
 
-            for ($j = 4; $j <= 10; $j++) {
+            for ($j = 4; $j <= 12; $j++) {
 
                 factory ( Player::class, 1 )->create ([
                     'id_team' => $i,
                     'num_dorsal' => $j,
                     'id_position' => '2',
                     'id_user' => $i
-                    // Delantero
+                    // Defensa
 
                 ]);
             }
 
-            for ($j = 11; $j <= 17; $j++) {
+            for ($j = 13; $j <= 19; $j++) {
 
                 factory ( Player::class, 1 )->create ([
                     'id_team' => $i,
@@ -50,14 +50,14 @@ class PlayerTableSeeder extends Seeder
                 ]);
             }
 
-            for ($j = 18; $j <= 25; $j++) {
+            for ($j = 20; $j <= 25; $j++) {
 
             factory ( Player::class, 1 )->create ([
                 'id_team' => $i,
                 'num_dorsal' => $j,
                 'id_position' => '4',
                 'id_user' => $i
-                // Defensa
+                // Delantero
 
             ]);
             }

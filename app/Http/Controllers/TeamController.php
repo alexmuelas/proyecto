@@ -124,4 +124,59 @@ class TeamController extends Controller
 
 
     }
+
+
+    public function add_titular(Request $request,Player $player, User $user)
+    {
+        $player_id = $request->player_id;
+
+        $titular = $request->titular;
+
+        //Obtengo la alineacion del usuario logeado
+        $user_position = Auth::user()->alineacion;
+
+        //Obtengo la alineacion separada en un array
+        $array = explode('-',$user_position);
+
+        //Obtengo al jugador
+        $players = Player::Where('id', $player_id)->get();
+
+        //Obtengo la posicion del jugador
+        $player_position = $players[0]->id_position;
+
+        //Obtengo el numero de jugadores que tienen la id del usuario actual, con la posicion del jugador que estoy selecionando ahora mismo
+        //y cuento cuantos son titulares
+        $cuenta = Player::All()->Where('id_user', Auth::user()->id)->Where('id_position', $player_position)->Where('titular', 1);
+
+
+        if($titular !="X"){
+
+            if($player_position == 1 && count($cuenta)<$array[0] || $titular == 0){
+
+                $player = Player::find($player_id);
+                $player->titular = $titular;
+                $player->save();
+
+            }elseif($player_position == 2 && count($cuenta)<$array[1]){
+                $player = Player::find($player_id);
+                $player->titular = $titular;
+                $player->save();
+
+            }elseif($player_position == 3 && count($cuenta)<$array[2]){
+                $player = Player::find($player_id);
+                $player->titular = $titular;
+                $player->save();
+
+            }elseif($player_position == 4    && count($cuenta)<$array[3]){
+                $player = Player::find($player_id);
+                $player->titular = $titular;
+                $player->save();
+
+            }
+            
+         }
+            return redirect('edit_team');
+
+
+    }
 }
