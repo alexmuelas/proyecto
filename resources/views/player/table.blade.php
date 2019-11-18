@@ -19,28 +19,36 @@
                         <div class="table-responsive">
 
                                     <!-- Vaciar tabla goles mediante modal -->
-                        <button class="btn btn-primary btn-round btn-sm  pull-right" data-toggle="modal"
-                                            data-target="#modalAddToProduct" id=""
+                        <button class="btn btn-danger btn-simple btn-sm  pull-right" data-toggle="modal"
+                                            data-target="#modalDeleteGoals" id=""
                                             title="{{ __('menu.add_goals')}}"
                                     >
-                                    <i style="font-size: 1em;  width:6; height:6;"
-                                                    class="material-icons">sports_soccer</i></button>
+                                    {{ __('menu.delete') }}</button>
+
+                                                    @include('partials.delete_goals')
 
 
                                         <!-- Dar puntos a los jugadores -->
-                        <button class="btn btn-primary btn-round btn-sm  pull-right" data-toggle="modal"
-                                            data-target="#modalAddToProduct" id=""
+                        <button class="btn btn-primary btn-simple btn-sm  pull-right" data-toggle="modal"
+                                            data-target="#modalAddPoints" id=""
                                             title="{{ __('menu.add_goals')}}"
                                     >
                                     <i style="font-size: 1em;  width:6; height:6;"
-                                                    class="material-icons">sports_soccer</i></button>
+                                                    class="material-icons">emoji_events</i></button>
+
+                                                    @include('partials.add_points')
+
+
+                                                    <!-- <button class="btn btn-primary btn-round btn-sm  pull-right" dhref="{{ url('/new_player') }}"
+                                            title="{{ __('menu.add_goals')}}"
+                                    >{{ __('menu.new_player')}}</button> -->
 
 
 
-                            <a href="{{ url('/new_player') }}" style="color: white; margin: 0px 0px 20px 0px"
-                                class="btn btn-primary pull-right">{{ __('menu.new_player')}}</a>
+                           <button  class="btn btn-primary btn-simple btn-sm  pull-right"> <a href="{{ url('/new_player') }}" style="color: white; margin: 0px 0px 20px 0px"
+                               >{{ __('menu.new_player')}}</a>
 
-                                
+                           </button>
 
 
 

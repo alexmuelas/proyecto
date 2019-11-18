@@ -59,6 +59,8 @@ Route::post('/add_titular', 'TeamController@add_titular');
 
 
 
+
+
 //Tabla players
 Route::get('/player', 'PlayerController@table_player')->name('player');
 Route::get('/new_player', 'PlayerController@new_player')->name('new_player');
@@ -68,6 +70,12 @@ Route::get('/player/{player}/edit', 'PlayerController@edit_player')->name('edit_
 Route::put('/player/{player}', 'PlayerController@update_player');
 
 Route::post('/add', 'PlayerController@goals');
+
+
+Route::get('/deletegoals', 'PlayerController@deletegoals')->name('deletegoals');
+Route::get('/addpoints', 'PlayerController@addpoints')->name('addpoints');
+
+
 
 
 

@@ -198,4 +198,50 @@ class PlayerController extends Controller
 
 
     }
+
+    public function deletegoals()
+    {
+        
+
+        $players = Player::All();
+
+        foreach($players as $player){
+
+        $player->goals = '0';
+        $player->save();
+
+        }
+
+        return view ( 'player.table', compact ('players') );
+    }
+
+    public function addpoints()
+    {
+        
+
+        $players = Player::All();
+
+        foreach($players as $player){
+
+            if($player->goals == '1'){
+                $player->points = ($player->goals)*10;
+                $player->save();
+ 
+
+            }elseif($player->goals > '1'){
+                $player->points = ($player->goals)*15;
+                $player->save();
+            }elseif($player->titular == '1'){
+                $player->points += 5;
+                $player->save();
+            }
+
+            //Cuento el total de usuarios
+            //Le hago un for con el count, buscando los jugadores de la misma ID
+            //sumo los puntos y los guardo en el player 
+
+        }
+
+        return view ( 'player.table', compact ('players') );
+    }
 }
