@@ -68,7 +68,8 @@ return [
     'amount_goals' => "Cantidad de goles",
     'goals' => "Goles",
     'titular' => "Titular",
-    'ele_position' => "Elegir posición"
+    'ele_position' => "Elegir posición",
+    'add_titular' => "Añadir titular"
 
 
 

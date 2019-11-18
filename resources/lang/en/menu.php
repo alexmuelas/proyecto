@@ -68,7 +68,8 @@ return [
     'amount_goals' => "Number of goals",
     'goals' => "Goals",
     'titular' => "Headline",
-    'ele_position' => "Choose position"
+    'ele_position' => "Choose position",
+    'add_titular' => "Add headline"
 
 
 

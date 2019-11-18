@@ -17,8 +17,30 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
+
+                                    <!-- Vaciar tabla goles mediante modal -->
+                        <button class="btn btn-primary btn-round btn-sm  pull-right" data-toggle="modal"
+                                            data-target="#modalAddToProduct" id=""
+                                            title="{{ __('menu.add_goals')}}"
+                                    >
+                                    <i style="font-size: 1em;  width:6; height:6;"
+                                                    class="material-icons">sports_soccer</i></button>
+
+
+                                        <!-- Dar puntos a los jugadores -->
+                        <button class="btn btn-primary btn-round btn-sm  pull-right" data-toggle="modal"
+                                            data-target="#modalAddToProduct" id=""
+                                            title="{{ __('menu.add_goals')}}"
+                                    >
+                                    <i style="font-size: 1em;  width:6; height:6;"
+                                                    class="material-icons">sports_soccer</i></button>
+
+
+
                             <a href="{{ url('/new_player') }}" style="color: white; margin: 0px 0px 20px 0px"
                                 class="btn btn-primary pull-right">{{ __('menu.new_player')}}</a>
+
+                                
 
 
 
@@ -76,7 +98,7 @@
                                             title="{{ __('menu.add_goals')}}"
                                     >
                                     <i style="font-size: 1em;  width:6; height:6;"
-                                                    class="material-icons">sports_soccer</i>  </button>                                   </button>
+                                                    class="material-icons">sports_soccer</i></button>
 
                                         </td>
 

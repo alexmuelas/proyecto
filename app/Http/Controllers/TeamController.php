@@ -6,6 +6,7 @@ use App\User;
 use App\Player;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class TeamController extends Controller
 {
@@ -157,25 +158,44 @@ class TeamController extends Controller
                 $player->titular = $titular;
                 $player->save();
 
+                return redirect('edit_team');
+
             }elseif($player_position == 2 && count($cuenta)<$array[1]){
                 $player = Player::find($player_id);
                 $player->titular = $titular;
                 $player->save();
+                
+                return redirect('edit_team');
 
             }elseif($player_position == 3 && count($cuenta)<$array[2]){
                 $player = Player::find($player_id);
                 $player->titular = $titular;
                 $player->save();
 
+                return redirect('edit_team');
+
             }elseif($player_position == 4    && count($cuenta)<$array[3]){
                 $player = Player::find($player_id);
                 $player->titular = $titular;
                 $player->save();
 
+                return redirect('edit_team');
+
             }
             
          }
-            return redirect('edit_team');
+
+
+         return Redirect::to('edit_team/')->with('alertas', 'Maximo de jugadores titulares alcanzado');
+
+        //  $sessionManager->flash('mensaje', 'Este es el mensaje');
+
+        //  return view('team.edit_team');
+
+            // $error ="Maximo de jugadores titulares alcanzado";
+            // return redirect('edit_team',compact ('error') );
+            // return view ( 'team.edit_team', compact ('players') );
+
 
 
     }

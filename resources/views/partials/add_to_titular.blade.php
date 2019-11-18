@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title">{{ __('menu.amount_goals')}}</h3>
+                <h3 class="modal-title">{{ __('menu.titular')}}</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="material-icons">clear</i>
                 </button>
@@ -31,7 +31,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="sumbit" class="btn btn-primary">{{ __('menu.add_goals')}}</button>
+                    <button type="sumbit" class="btn btn-primary">{{ __('menu.add_titular')}}</button>
                 </div>
             </form>
 

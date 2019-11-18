@@ -15,6 +15,13 @@
                         </div>
                         <h4 class="card-title">{{ __('menu.table_player') }}</h4>
                     </div>
+                    @if(Session::has('alertas'))
+                       <div class="alert alert-danger">
+                                <ul>
+                                        <li class="text-center">{{ Session::get('alertas') }}</li>
+                                </ul>
+                            </div>
+                    @endif
                     <div class="card-body">
                         <div class="table-responsive">
                             <!-- <a href="{{ url('/new_player') }}" style="color: white; margin: 0px 0px 20px 0px"
@@ -69,14 +76,14 @@
 
                                             <button class="btn btn-primary btn-round btn-lm" data-toggle="modal"
                                                 data-target="#modalAddToTitular{{$player->id }}" id="{{$player->id}}"
-                                                title="{{ __('menu.add_goals')}}">
+                                                title="{{ __('menu.titular')}}">
                                                 <i style="font-size: 1em;  width:6; height:6;"
                                                     class="material-icons">compare_arrows</i> </button> </button>
 
                                         </td>
 
 
-                                        @include('partials.add_to_position')
+                                        @include('partials.add_to_titular')
 
                                         @endforeach
 
