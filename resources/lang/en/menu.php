@@ -71,6 +71,8 @@ return [
     'ele_position' => "Choose position",
     'add_titular' => "Add headline",
     'sure2' => "Are you sure you want to add points?",
+    'alineacion' => "Alignment",
+    'calculate_points' => "Calculate points"
 
 
 

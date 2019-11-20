@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
             'user_name' => 'alex',
             'password' => bcrypt ( '123456' ),
             'money' => '999999999',
+            'name_myteam' => 'Muelas Team',
             'admin' => true,
             'email_verified_at' => '2019-11-05 08:41:52'
         ]);

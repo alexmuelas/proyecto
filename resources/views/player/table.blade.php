@@ -33,8 +33,7 @@
                                             data-target="#modalAddPoints" id=""
                                             title="{{ __('menu.add_goals')}}"
                                     >
-                                    <i style="font-size: 1em;  width:6; height:6;"
-                                                    class="material-icons">emoji_events</i></button>
+                                    {{ __('menu.calculate_points') }} </button>
 
                                                     @include('partials.add_points')
 

@@ -71,6 +71,8 @@ return [
     'ele_position' => "Elegir posición",
     'add_titular' => "Añadir titular",
     'sure2' => "¿Estas seguro que quieres añadir los puntos?",
+    'alineacion' => "Alineación",
+    'calculate_points' => "Calcular puntos"
 
 
 

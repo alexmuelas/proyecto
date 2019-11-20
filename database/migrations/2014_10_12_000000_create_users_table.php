@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('admin')->default(false);
-            $table->string('name_myteam')->nullable();
+            $table->string('name_myteam');
             $table->string('alineacion')->default('1-4-4-2');
             $table->integer('points_myteam')->default(0);
             $table->rememberToken();

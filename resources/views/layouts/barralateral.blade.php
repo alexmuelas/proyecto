@@ -44,7 +44,7 @@
 
     $(document).ready(function () {
         $('#example2').DataTable( {
-        order: [ 5, 'desc' ]
+        order: [ 4, 'desc' ]
     } );
     });
 

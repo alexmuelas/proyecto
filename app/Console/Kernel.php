@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
+use App\Puja; 
+
 class Kernel extends ConsoleKernel
 {
     /**
@@ -28,7 +30,17 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
         $schedule->call(function () {
-            DB::table('pujas')->delete();
+
+            $pujas = Puja::All();
+
+            if(count($pujas) == 0){
+                dd(count($pujas));
+
+            }
+
+           
+
+            //DB::table('pujas')->delete();
         })->everyMinute();
     }
 
