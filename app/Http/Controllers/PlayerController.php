@@ -242,23 +242,24 @@ class PlayerController extends Controller
             $users = User::All();
 
             $totaluser = count($users);
-            $points_total = 0;
+            
             
             //Le hago un for con el count, buscando los jugadores de la misma ID
             for($i=1; $i<($totaluser+1); $i++){
+                $player_user = 0;
                 $player_user = Player::All()->Where('id_user', ($i));
 
-                $total_player_user = count($player_user);
-                    
-               //dd( $player_user);
-                if($total_player_user>0){
-                for($j=0; $j< $total_player_user; $j++){
-                   
-                    var_dump( $player_user[($j)]);
-                    $points_total = $player_user[($j)]->points + $points_total;
+                $total_player_user = count($player_user);          
 
-                }
-                //dd($users[($i)]);
+               if($total_player_user>0){
+                $points_total = 0;
+               
+                foreach($player_user as $player_user2){
+
+                    $points_total = $player_user2->points + $points_total;
+            
+                    }
+
                 $users[($i)] -> points_myteam = $points_total;
                 $users[($i)]-> save();
 

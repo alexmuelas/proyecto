@@ -31,7 +31,7 @@ class CreatePlayersTable extends Migration
             $table->boolean('titular')->default('0');
             //0 No es titular, 1 es titular
             $table->integer('goals')->default('0');
-            $table->string('points')->nullable();
+            $table->string('points')->default('0');
             $table->timestamps();
           
         });

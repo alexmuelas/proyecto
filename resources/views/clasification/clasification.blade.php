@@ -25,11 +25,10 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">#</th>
-                                        <th>{{ __('menu.name') }}</th>
                                         <th>User Name</th>
-                                        <th>Email</th>
                                         <th>{{ __('menu.name_myteam') }}</th>
-                                        <th>{{ __('menu.money') }}</th>
+                                        <th>{{ __('menu.headline') }}</th>
+                                        <th>{{ __('menu.points') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,10 +37,9 @@
                                     <tr>
 
                                         <td class="text-center">{{ $user->id}}</td>
-                                        <td>{{ $user->name}}</td>
                                         <td>{{ $user->user_name}}</td>
-                                        <td>{{ $user->email}}</td>
-                                        <th>{{ $user->name_myteam}}</th>
+                                        <td>{{ $user->name_myteam}}</td>
+                                        <td>{{ $user->alineacion}}</td>
                                         <td class="text-left">{{ $user->points_myteam}}</td>
                                         
                                     @endforeach
@@ -50,12 +48,11 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                        <th class="text-center">#</th>
-                                        <th>{{ __('menu.name') }}</th>
+                                <th class="text-center">#</th>
                                         <th>User Name</th>
-                                        <th>Email</th>
                                         <th>{{ __('menu.name_myteam') }}</th>
-                                        <th>{{ __('menu.points_myteam') }}</th>
+                                        <th>{{ __('menu.headline') }}</th>
+                                        <th>{{ __('menu.points') }}</th>
                                     </tr>
                                 </tfoot>
                             </table>
