@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Puja;
 use Illuminate\Http\Request;
 
 class PujaController extends Controller
@@ -86,5 +87,15 @@ class PujaController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function table_pujas()
+    {
+        
+        // $players = Player::paginate(10);
+
+        $pujas = Puja::All();
+
+        return view ( 'pujas.table', compact ('pujas') );
     }
 }

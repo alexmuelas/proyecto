@@ -62,6 +62,10 @@
     } );
     });
 
+    $(document).ready(function () {
+        $('#example5').DataTable();
+    });
+
     
 
 </script>
@@ -376,7 +380,7 @@ background-size:100% 100%;">
                         <div class="collapse" id="componentsExamples">
                             <ul class="nav">
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="../examples/components/buttons.html">
+                                    <a class="nav-link" href="/pujas">
                                         <!-- <span class="sidebar-mini"> B </span> -->
                                         <span class="sidebar-normal"> {{ __('menu.bid') }} </span>
                                     </a>

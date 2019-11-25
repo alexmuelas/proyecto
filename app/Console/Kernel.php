@@ -2,11 +2,13 @@
 
 namespace App\Console;
 
+use App\Puja; 
+use App\Player;
 use Illuminate\Support\Facades\DB;
+
+
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
-use App\Puja; 
 
 class Kernel extends ConsoleKernel
 {
@@ -34,7 +36,64 @@ class Kernel extends ConsoleKernel
             $pujas = Puja::All();
 
             if(count($pujas) == 0){
-                dd(count($pujas));
+               // dd(count($pujas));
+
+               $player_NoID = Player::Where('id_user', Null)->Where('id_position', '1')->get()->random(10);
+
+               for ($i = 0; $i < count($player_NoID); $i++) {
+       
+                $players = new Puja();
+
+                $players ->id_player = $player_NoID[$i]->id;
+                $players ->name_player = $player_NoID[$i]->name;
+                $players ->id_position = $player_NoID[$i]->id_position;
+                $players ->money_puja = $player_NoID[$i]->valor_inicial;
+       
+                $players->save();
+               }
+
+               $player_NoID = Player::Where('id_user', Null)->Where('id_position', '2')->get()->random(20);
+
+               for ($i = 0; $i < count($player_NoID); $i++) {
+       
+                $players = new Puja();
+
+                $players ->id_player = $player_NoID[$i]->id;
+                $players ->name_player = $player_NoID[$i]->name;
+                $players ->id_position = $player_NoID[$i]->id_position;
+                $players ->money_puja = $player_NoID[$i]->valor_inicial;
+       
+                $players->save();
+               }
+
+
+               $player_NoID = Player::Where('id_user', Null)->Where('id_position', '3')->get()->random(15);
+
+               for ($i = 0; $i < count($player_NoID); $i++) {
+       
+                $players = new Puja();
+
+                $players ->id_player = $player_NoID[$i]->id;
+                $players ->name_player = $player_NoID[$i]->name;
+                $players ->id_position = $player_NoID[$i]->id_position;
+                $players ->money_puja = $player_NoID[$i]->valor_inicial;
+       
+                $players->save();
+               }
+
+               $player_NoID = Player::Where('id_user', Null)->Where('id_position', '4')->get()->random(15);
+
+               for ($i = 0; $i < count($player_NoID); $i++) {
+       
+                $players = new Puja();
+
+                $players ->id_player = $player_NoID[$i]->id;
+                $players ->name_player = $player_NoID[$i]->name;
+                $players ->id_position = $player_NoID[$i]->id_position;
+                $players ->money_puja = $player_NoID[$i]->valor_inicial;
+       
+                $players->save();
+               }
 
             }
 

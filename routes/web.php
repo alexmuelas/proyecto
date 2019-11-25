@@ -57,6 +57,8 @@ Route::post('/add_position', 'TeamController@add_position');
 Route::post('/add_titular', 'TeamController@add_titular');
 
 
+//Pujas
+Route::get('/pujas', 'PujaController@table_pujas')->name('pujas');
 
 
 

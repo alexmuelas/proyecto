@@ -23,6 +23,6 @@ class UsersTableSeeder extends Seeder
             'email_verified_at' => '2019-11-05 08:41:52'
         ]);
 
-        factory ( User::class, 50 )->create ();
+        factory ( User::class, 5000 )->create ();
     }
 }
