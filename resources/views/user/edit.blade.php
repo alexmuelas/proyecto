@@ -21,7 +21,7 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{ url('/user/' . $user->id) }}" method="post" class="form">
+                <form action="{{ url('/useredit/' . $user->id) }}" method="post" class="form">
                 @csrf
                     @method('PUT')
                     <div class="row">

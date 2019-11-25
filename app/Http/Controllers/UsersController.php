@@ -61,11 +61,6 @@ class UsersController extends Controller
 
             //$pack = Product::where('id', $request->pack)->first();
 
-            
-
-            $id = Auth::user()->id;
-            dd($id);
-
             return redirect('/home');
     }
 

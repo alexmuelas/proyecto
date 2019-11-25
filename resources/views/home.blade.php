@@ -14,12 +14,12 @@
                               <div class="card-header card-header-rose">
                               </div>
                               <div class="card-body">
-                                <h4 class="card-title">Website Views</h4>
-                                <p class="card-category">Last Campaign Performance</p>
+                                <h2 class="card-title text-center">{{ __('menu.team') }}</h2>
+                                <h4 class="card-category">&nbsp;</h4>
                               </div>
                               <div class="card-footer">
                                 <div class="stats">
-                                  <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                <h5><a class="nav-link  text-center" href="{{ url('/team') }}"> {{ __('menu.go_team') }}</a></h5>
                                 </div>
                               </div>
                             </div>
@@ -29,12 +29,12 @@
                               <div class="card-header card-header-rose">
                               </div>
                               <div class="card-body">
-                                <h2 class="card-title">{{ __('money')}}</h2>
-                                <h4 class="card-category">  {{ Auth::user()->money }} €</h4>
+                                <h2 class="card-title  text-center">{{ __('money')}}</h2>
+                                <h4 class="card-category  text-center">  {{ Auth::user()->money }} €</h4>
                               </div>
                               <div class="card-footer">
                                 <div class="stats">
-                                  <h5><a class="nav-link" href="{{ url('/addmoney') }}"> Add money</a></h5>
+                                  <h5 class="text-center"><a class="nav-link " href="{{ url('/addmoney') }}"> Add money</a></h5>
                                 </div>
                               </div>
                             </div>
@@ -44,12 +44,12 @@
                               <div class="card-header card-header-rose">
                               </div>
                               <div class="card-body">
-                                <h4 class="card-title">Website Views</h4>
-                                <p class="card-category">Last Campaign Performance</p>
+                                <h2 class="card-title  text-center">{{ __('menu.clasification') }}</h2>
+                                <h4 class="card-category">&nbsp;</h4>
                               </div>
                               <div class="card-footer">
                                 <div class="stats">
-                                  <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                <h5><a class="nav-link  text-center" href="{{ url('/clasification') }}"> {{ __('menu.go_clasification') }}</a></h5>
                                 </div>
                               </div>
                             </div>

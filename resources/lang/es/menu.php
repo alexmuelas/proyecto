@@ -72,7 +72,9 @@ return [
     'add_titular' => "Añadir titular",
     'sure2' => "¿Estas seguro que quieres añadir los puntos?",
     'alineacion' => "Alineación",
-    'calculate_points' => "Calcular puntos"
+    'calculate_points' => "Calcular puntos",
+    'go_team' => "Ir al equipo",
+    'go_clasification' => "Ir a la clasificación"
 
 
 

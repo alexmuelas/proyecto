@@ -32,3 +32,37 @@ Le añadimos:
 Si quiero probarlo al momento:
      php artisan schedule:run
 
+
+
+-------TRADUCCION-------
+
+Lo primero de todo es crear el middleware
+
+php artisan make:middleware Language y modificarlo
+
+y en app\Htpp\Controller añadimos la siguietne funcion
+
+public function setLanguage(string $lang)
+    {
+        if (array_key_exists($lang, config('language'))) {
+            session()->put('applocale', $lang);
+        }
+        return back();
+    }
+
+En la carpeta config añadimos el archivo language.php
+
+En el kernel .php añadimos en     protected $middlewareGroups = [
+             \App\Http\Middleware\Language::class,
+
+
+Añadimos la ruta Route::get('set_language/{lang}', 'Controller@setLanguage')->name('set_language');
+
+
+
+para cambiar de idioma cada texto sustituimos el texto por 
+{{ __('app.name') }}
+
+en la carpeta en y es añadimos la archivo app     'name'   => 'Nombre',
+ o     'name'   => 'Name',
+

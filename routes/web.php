@@ -38,7 +38,7 @@ Route::post('/create_user', 'UsersController@store');
 Route::post('/register_user', 'UsersController@create');
 
 Route::put('/usersedit', 'UsersController@update');
-Route::put('/user/{user}', 'UsersController@update_user');
+Route::put('/useredit/{user}', 'UsersController@update_user');
 
 
 Route::delete('/users/{user}', 'UsersController@destroy');

@@ -260,8 +260,8 @@ class PlayerController extends Controller
             
                     }
 
-                $users[($i)] -> points_myteam = $points_total;
-                $users[($i)]-> save();
+                $users[($i-1)] -> points_myteam = $points_total;
+                $users[($i-1)]-> save();
 
             }
 
