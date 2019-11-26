@@ -20,7 +20,7 @@ class CreatePujasTable extends Migration
             $table->string('name_player');
             $table->integer('id_comprador')->nullable();
             $table->integer('id_position');
-            $table->integer('money_puja');
+            $table->bigInteger('money_puja');
             $table->boolean('status')->default(0); //0 puja abierta, 1 puja cerrada
             $table->timestamps();
         });

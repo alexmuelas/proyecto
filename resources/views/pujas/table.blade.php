@@ -48,7 +48,6 @@
 
                                         <td class="text-center">{{ $puja->id}}</td>
                                         <td>{{ $puja->name_player}}</td>
-
                                         <td>{{ $puja->position_name}}</td>
                                         <td>{{ $puja->money_puja}}</td>
 
@@ -57,22 +56,17 @@
 
                                         <td class="td-actions text-right">
 
-                                            <a type="button" rel="tooltip" class="btn btn-success btn-round btn-sm"
+                                            <!-- <a type="button" rel="tooltip" class="btn btn-success btn-round btn-sm"
                                                 href="{{ url('/player/' . $puja->id . '/edit' ) }}">
                                                 <i style="font-size: 1em;  width:6; height:6;"
                                                     class="material-icons">edit</i>
-                                            </a>
+                                            </a> -->
 
-                                            <button type="submit" rel="tooltip" class="btn btn-danger btn-simple btn-sm"
-                                                data-toggle="modal" data-target='#modalDeletePlayer{{$puja->id }}'>
-                                                <i style="font-size: 1em;  width:6; height:6;"
-                                                    class="material-icons">clear</i>
-                                            </button>
-
-                                            <!-- ------------------------------------------- -->
+                                            
+                                            <!--------------------------------------------- -->
                                             <button class="btn btn-primary btn-round btn-sm" data-toggle="modal"
-                                                data-target="#modalAddToProduct{{$puja->id }}" id="{{$puja->id}}"
-                                                title="{{ __('menu.add_goals')}}">
+                                                data-target="#modalAddToBid{{$puja->id }}{{ $puja->money_puja}}{{$puja->id_vendedor}}{{$puja->name_player }}{{$puja->id_position}}" id="{{$puja->id}}"
+                                                title="{{ __('menu.add_puja')}}">
                                                 <i style="font-size: 1em;  width:6; height:6;"
                                                     class="material-icons">sports_soccer</i></button>
 
@@ -80,8 +74,7 @@
 
                                     </tr>
 
-                                    @include('partials.delete_player')
-                                    @include('partials.add_to_product')
+                                    @include('partials.add_to_bid')
 
                                     @endforeach
 

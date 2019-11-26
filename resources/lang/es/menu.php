@@ -74,7 +74,8 @@ return [
     'alineacion' => "Alineación",
     'calculate_points' => "Calcular puntos",
     'go_team' => "Ir al equipo",
-    'go_clasification' => "Ir a la clasificación"
+    'go_clasification' => "Ir a la clasificación",
+    'add_puja' => "Añadir puja"
 
 
 

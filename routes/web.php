@@ -60,7 +60,7 @@ Route::post('/add_titular', 'TeamController@add_titular');
 //Pujas
 Route::get('/pujas', 'PujaController@table_pujas')->name('pujas');
 
-
+Route::post('/add_bid', 'PujaController@bid')->name('bid');
 
 
 //Tabla players
