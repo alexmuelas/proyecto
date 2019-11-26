@@ -62,7 +62,8 @@ Route::get('/pujas', 'PujaController@table_pujas')->name('pujas');
 
 Route::post('/add_bid', 'PujaController@bid')->name('bid');
 
-
+Route::get('/new_puja', 'PujaController@new_puja')->name('new_puja');
+Route::post('/create_puja', 'PujaController@store');
 //Tabla players
 Route::get('/player', 'PlayerController@table_player')->name('player');
 Route::get('/new_player', 'PlayerController@new_player')->name('new_player');

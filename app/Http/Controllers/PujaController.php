@@ -44,7 +44,42 @@ class PujaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            // 'name' => 'required | min:3 | max:200',
+            // 'initial_value' => 'numeric|required|min:0|max:99999999',
+            // 'dorsal' => 'numeric|required|min:0|max:99',
+            // 'points' => 'numeric|required|min:0|max:99',
+
+            
+        
+            ]);
+
+            $player = Player::get()->Where('name', ($request->player_name));
+
+            foreach($player as $playe){
+
+           //dd($playe->name);
+            
+
+            if($playe->valor_inicial < $request->money){
+
+                $puja = new Puja();
+                //$player = Player::find($id);
+                $puja->id_player = $playe->id;
+                //$puja->id_comprador = Auth::user()->id;
+                $puja->id_vendedor = Auth::user()->id;
+                $puja->name_player = $playe ->name;
+                $puja->id_position = $playe ->id_position;
+                $puja->money_puja = $request->money;
+                //dd($request);
+                  $puja->save();
+      
+                  return redirect('/pujas');
+            }else{
+                return redirect('/pujas')->with('alertas', 'Puja demasiado baja');
+            }
+        }
+            
     }
 
     /**
@@ -129,5 +164,16 @@ class PujaController extends Controller
             return redirect('pujas');
 
 
+    }
+
+    public function new_puja(){
+
+        
+        $players = Player::All()->Where('id_user', Auth::user()->id);
+      
+
+
+        return view ('pujas.new_puja', compact('players'));
+        
     }
 }

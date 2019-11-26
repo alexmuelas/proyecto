@@ -15,6 +15,13 @@
                         </div>
                         <h4 class="card-title">{{ __('menu.table_player') }}</h4>
                     </div>
+                    @if(Session::has('alertas'))
+                       <div class="alert alert-danger">
+                                <ul>
+                                        <li class="text-center">{{ Session::get('alertas') }}</li>
+                                </ul>
+                            </div>
+                    @endif
                     <div class="card-body">
                         <div class="table-responsive">
 
@@ -23,7 +30,7 @@
 
 
                             <button class="btn btn-primary btn-simple btn-sm  pull-right"> <a
-                                    href="{{ url('/new_player') }}"
+                                    href="{{ url('/new_puja') }}"
                                     style="color: white; margin: 0px 0px 20px 0px">{{ __('menu.new_player')}}</a>
 
                             </button>
