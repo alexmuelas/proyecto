@@ -219,56 +219,56 @@ class PlayerController extends Controller
     {
         
 
-        $players = Player::All();
+        // $players = Player::All();
 
-        foreach($players as $player){
+        // foreach($players as $player){
 
-            if($player->goals == '1'){
-                $player->points = ($player->goals)*10;
-                $player->save();
+        //     if($player->goals == '1'){
+        //         $player->points = ($player->goals)*10;
+        //         $player->save();
  
 
-            }elseif($player->goals > '1'){
-                $player->points = ($player->goals)*15;
-                $player->save();
-            }elseif($player->titular == '1'){
-                $player->points += 5;
-                $player->save();
-            }
+        //     }elseif($player->goals > '1'){
+        //         $player->points = ($player->goals)*15;
+        //         $player->save();
+        //     }elseif($player->titular == '1'){
+        //         $player->points += 5;
+        //         $player->save();
+        //     }
 
-        }
+        // }
 
-            //Cuento el total de usuarios
-            $users = User::All();
+        //     //Cuento el total de usuarios
+        //     $users = User::All();
 
-            $totaluser = count($users);
+        //     $totaluser = count($users);
             
             
-            //Le hago un for con el count, buscando los jugadores de la misma ID
-            for($i=1; $i<($totaluser+1); $i++){
-                $player_user = 0;
-                $player_user = Player::All()->Where('id_user', ($i));
+        //     //Le hago un for con el count, buscando los jugadores de la misma ID
+        //     for($i=1; $i<($totaluser+1); $i++){
+        //         $player_user = 0;
+        //         $player_user = Player::All()->Where('id_user', ($i));
 
-                $total_player_user = count($player_user);          
+        //         $total_player_user = count($player_user);          
 
-               if($total_player_user>0){
-                $points_total = 0;
+        //        if($total_player_user>0){
+        //         $points_total = 0;
                
-                foreach($player_user as $player_user2){
+        //         foreach($player_user as $player_user2){
 
-                    $points_total = $player_user2->points + $points_total;
+        //             $points_total = $player_user2->points + $points_total;
             
-                    }
+        //             }
 
-                $users[($i-1)] -> points_myteam = $points_total;
-                $users[($i-1)]-> save();
+        //         $users[($i-1)] -> points_myteam = $points_total;
+        //         $users[($i-1)]-> save();
 
-            }
+        //     }
 
-            }
+        //     }
 
         
 
-        return view ( 'player.table', compact ('players') );
+        //return view ( 'player.table', compact ('players') );
     }
 }

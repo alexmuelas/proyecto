@@ -29,13 +29,13 @@
 
 
                                         <!-- Dar puntos a los jugadores -->
-                        <button class="btn btn-primary btn-simple btn-sm  pull-right" data-toggle="modal"
+                        <!-- <button class="btn btn-primary btn-simple btn-sm  pull-right" data-toggle="modal"
                                             data-target="#modalAddPoints" id=""
                                             title="{{ __('menu.add_goals')}}"
                                     >
                                     {{ __('menu.calculate_points') }} </button>
 
-                                                    @include('partials.add_points')
+                                                    @include('partials.add_points') -->
 
 
                                                     <!-- <button class="btn btn-primary btn-round btn-sm  pull-right" dhref="{{ url('/new_player') }}"

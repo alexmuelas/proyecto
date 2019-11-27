@@ -45,6 +45,10 @@ Si quiero probarlo al momento:
  para ejecutarlo php artisan make:command php artisan repartir:puntos
 
 
+ Para repartir los puntos meto el comando: php artisan repartir:puntos
+para rellenar la tabla puja y que continuamente se autorenueve meto el comando php artisan jugadores:puja
+
+
 
 -------TRADUCCION-------
 

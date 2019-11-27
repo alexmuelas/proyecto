@@ -20,7 +20,9 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         //'AppConsoleCommandsHappyBirthday'
         \App\Console\Commands\HappyBirthday::class,
-        \App\Console\Commands\RepartirPuntos::class
+        \App\Console\Commands\RepartirPuntos::class,
+        \App\Console\Commands\Bid::class
+
     ];
 
     /**
@@ -31,6 +33,12 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+
+       // $schedule->command('jugadores:puja')->everyMinute();
+       $schedule->command('repartir:puntos')->everyMinute();
+       $schedule->command('jugadores:puja')->everyMinute();
+
+
         // $schedule->command('inspire')
         //          ->hourly();
 

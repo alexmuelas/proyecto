@@ -4,8 +4,9 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-use App\Puja; 
+use App\User; 
 use App\Player;
+use DateTime;
 
 class RepartirPuntos extends Command
 {
@@ -40,71 +41,69 @@ class RepartirPuntos extends Command
      */
     public function handle()
     {
-        $pujas = Puja::All();
-
-        if(count($pujas) == 0){
-           // dd(count($pujas));
-
-           $player_NoID = Player::Where('id_user', Null)->Where('id_position', '1')->get()->random(10);
-
-           for ($i = 0; $i < count($player_NoID); $i++) {
-   
-            $players = new Puja();
-
-            $players ->id_player = $player_NoID[$i]->id;
-            $players ->name_player = $player_NoID[$i]->name;
-            $players ->id_position = $player_NoID[$i]->id_position;
-            $players ->money_puja = $player_NoID[$i]->valor_inicial;
-   
-            $players->save();
-           }
-
-           $player_NoID = Player::Where('id_user', Null)->Where('id_position', '2')->get()->random(20);
-
-           for ($i = 0; $i < count($player_NoID); $i++) {
-   
-            $players = new Puja();
-
-            $players ->id_player = $player_NoID[$i]->id;
-            $players ->name_player = $player_NoID[$i]->name;
-            $players ->id_position = $player_NoID[$i]->id_position;
-            $players ->money_puja = $player_NoID[$i]->valor_inicial;
-   
-            $players->save();
-           }
 
 
-           $player_NoID = Player::Where('id_user', Null)->Where('id_position', '3')->get()->random(15);
+       
 
-           for ($i = 0; $i < count($player_NoID); $i++) {
-   
-            $players = new Puja();
+        $players = Player::All();
 
-            $players ->id_player = $player_NoID[$i]->id;
-            $players ->name_player = $player_NoID[$i]->name;
-            $players ->id_position = $player_NoID[$i]->id_position;
-            $players ->money_puja = $player_NoID[$i]->valor_inicial;
-   
-            $players->save();
-           }
+        foreach($players as $player){
 
-           $player_NoID = Player::Where('id_user', Null)->Where('id_position', '4')->get()->random(15);
+            if($player->goals == '1'){
+                $player->points = ($player->goals)*10;
+                $player->save();
+ 
 
-           for ($i = 0; $i < count($player_NoID); $i++) {
-   
-            $players = new Puja();
-
-            $players ->id_player = $player_NoID[$i]->id;
-            $players ->name_player = $player_NoID[$i]->name;
-            $players ->id_position = $player_NoID[$i]->id_position;
-            $players ->money_puja = $player_NoID[$i]->valor_inicial;
-   
-            $players->save();
-           }
+            }elseif($player->goals > '1'){
+                $player->points = ($player->goals)*15;
+                $player->save();
+            }elseif($player->titular == '1'){
+                $player->points += 5;
+                $player->save();
+            }
 
         }
 
-        $this->info('Tarea completada con exito');
+            //Cuento el total de usuarios
+            $users = User::All();
+
+            $totaluser = count($users);
+            
+            
+            //Le hago un for con el count, buscando los jugadores de la misma ID
+            for($i=1; $i<($totaluser+1); $i++){
+                $player_user = 0;
+                $player_user = Player::All()->Where('id_user', ($i));
+
+                $total_player_user = count($player_user);          
+
+               if($total_player_user>0){
+                $points_total = 0;
+               
+                foreach($player_user as $player_user2){
+
+                    $points_total = $player_user2->points + $points_total;
+            
+                    }
+
+                $users[($i-1)] -> points_myteam += $points_total;
+                $users[($i-1)]-> save();
+
+            }
+
+            }
+
+            $time = time();
+
+
+            $file = fopen(('public/log_puntos.txt'), "a");
+    
+            fwrite($file, 'Puntos repartidos con exito' . date("d-m-Y (H:i:s)", $time) . PHP_EOL);
+    
+    
+            fclose($file);
+    
+            //$this->info('Puntos repartidos con exito');
 
     }
 }
