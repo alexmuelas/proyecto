@@ -18,7 +18,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        //'AppConsoleCommandsHappyBirthday'
+        \App\Console\Commands\HappyBirthday::class,
+        \App\Console\Commands\RepartirPuntos::class
     ];
 
     /**
@@ -31,76 +33,79 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->call(function () {
 
-            $pujas = Puja::All();
 
-            if(count($pujas) == 0){
-               // dd(count($pujas));
+        // $schedule->call(function () {
 
-               $player_NoID = Player::Where('id_user', Null)->Where('id_position', '1')->get()->random(10);
+            // $pujas = Puja::All();
 
-               for ($i = 0; $i < count($player_NoID); $i++) {
+            // if(count($pujas) == 0){
+            //    // dd(count($pujas));
+
+            //    $player_NoID = Player::Where('id_user', Null)->Where('id_position', '1')->get()->random(10);
+
+            //    for ($i = 0; $i < count($player_NoID); $i++) {
        
-                $players = new Puja();
+            //     $players = new Puja();
 
-                $players ->id_player = $player_NoID[$i]->id;
-                $players ->name_player = $player_NoID[$i]->name;
-                $players ->id_position = $player_NoID[$i]->id_position;
-                $players ->money_puja = $player_NoID[$i]->valor_inicial;
+            //     $players ->id_player = $player_NoID[$i]->id;
+            //     $players ->name_player = $player_NoID[$i]->name;
+            //     $players ->id_position = $player_NoID[$i]->id_position;
+            //     $players ->money_puja = $player_NoID[$i]->valor_inicial;
        
-                $players->save();
-               }
+            //     $players->save();
+            //    }
 
-               $player_NoID = Player::Where('id_user', Null)->Where('id_position', '2')->get()->random(20);
+            //    $player_NoID = Player::Where('id_user', Null)->Where('id_position', '2')->get()->random(20);
 
-               for ($i = 0; $i < count($player_NoID); $i++) {
+            //    for ($i = 0; $i < count($player_NoID); $i++) {
        
-                $players = new Puja();
+            //     $players = new Puja();
 
-                $players ->id_player = $player_NoID[$i]->id;
-                $players ->name_player = $player_NoID[$i]->name;
-                $players ->id_position = $player_NoID[$i]->id_position;
-                $players ->money_puja = $player_NoID[$i]->valor_inicial;
+            //     $players ->id_player = $player_NoID[$i]->id;
+            //     $players ->name_player = $player_NoID[$i]->name;
+            //     $players ->id_position = $player_NoID[$i]->id_position;
+            //     $players ->money_puja = $player_NoID[$i]->valor_inicial;
        
-                $players->save();
-               }
+            //     $players->save();
+            //    }
 
 
-               $player_NoID = Player::Where('id_user', Null)->Where('id_position', '3')->get()->random(15);
+            //    $player_NoID = Player::Where('id_user', Null)->Where('id_position', '3')->get()->random(15);
 
-               for ($i = 0; $i < count($player_NoID); $i++) {
+            //    for ($i = 0; $i < count($player_NoID); $i++) {
        
-                $players = new Puja();
+            //     $players = new Puja();
 
-                $players ->id_player = $player_NoID[$i]->id;
-                $players ->name_player = $player_NoID[$i]->name;
-                $players ->id_position = $player_NoID[$i]->id_position;
-                $players ->money_puja = $player_NoID[$i]->valor_inicial;
+            //     $players ->id_player = $player_NoID[$i]->id;
+            //     $players ->name_player = $player_NoID[$i]->name;
+            //     $players ->id_position = $player_NoID[$i]->id_position;
+            //     $players ->money_puja = $player_NoID[$i]->valor_inicial;
        
-                $players->save();
-               }
+            //     $players->save();
+            //    }
 
-               $player_NoID = Player::Where('id_user', Null)->Where('id_position', '4')->get()->random(15);
+            //    $player_NoID = Player::Where('id_user', Null)->Where('id_position', '4')->get()->random(15);
 
-               for ($i = 0; $i < count($player_NoID); $i++) {
+            //    for ($i = 0; $i < count($player_NoID); $i++) {
        
-                $players = new Puja();
+            //     $players = new Puja();
 
-                $players ->id_player = $player_NoID[$i]->id;
-                $players ->name_player = $player_NoID[$i]->name;
-                $players ->id_position = $player_NoID[$i]->id_position;
-                $players ->money_puja = $player_NoID[$i]->valor_inicial;
+            //     $players ->id_player = $player_NoID[$i]->id;
+            //     $players ->name_player = $player_NoID[$i]->name;
+            //     $players ->id_position = $player_NoID[$i]->id_position;
+            //     $players ->money_puja = $player_NoID[$i]->valor_inicial;
        
-                $players->save();
-               }
+            //     $players->save();
+            //    }
 
-            }
+            // }
 
            
 
             //DB::table('pujas')->delete();
-        })->everyMinute();
+        // })->everyMinute();
+
     }
 
     /**

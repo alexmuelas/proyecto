@@ -33,6 +33,18 @@ Si quiero probarlo al momento:
      php artisan schedule:run
 
 
+     Otra forma es 
+     php artisan make:command RepartirPuntos --command=repartir:puntos
+     Se crea un arcihvo en la carpeta Commands
+     Dentro de ese archivo 
+
+     En el     public function handle()
+ metemos la funcion que queremos ejecutar
+
+ y en el Kernel en $commands añadimos         \App\Console\Commands\RepartirPuntos::class
+ para ejecutarlo php artisan make:command php artisan repartir:puntos
+
+
 
 -------TRADUCCION-------
 
