@@ -11,7 +11,7 @@
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">{{ __('menu.change') }}</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="width: auto; margin: auto  140px auto 200px">
                 @if($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -53,10 +53,9 @@
                     </div>
                     
                     
-                    <button type="submit" class="btn btn-primary">{{ __('menu.save')}}</button>
-                    <a href="{{ url('/home') }}" class="btn btn-danger">{{ __('menu.cancel')}}</a>
+                    <button type="submit" class="btn btn-primary pull-center">{{ __('menu.save')}}</button>
+                    <a href="{{ url('/home') }}" class="btn btn-danger pull-center">{{ __('menu.cancel')}}</a>
 
-                    <div class="clearfix"></div>
                   </form>
                 </div>
               </div>

@@ -80,7 +80,7 @@
                     </div>
                     
                     
-                    <button type="submit" class="btn btn-primary pull-right">{{ __('menu.save')}}</button>
+                    <button type="submit" class="btn btn-primary">{{ __('menu.save')}}</button>
                     <a href="{{ url('/users') }}" class="btn btn-danger">{{ __('menu.cancel')}}</a>
 
                     <div class="clearfix"></div>

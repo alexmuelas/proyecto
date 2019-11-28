@@ -34,9 +34,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 
-       // $schedule->command('jugadores:puja')->everyMinute();
-       $schedule->command('repartir:puntos')->everyMinute();
-       $schedule->command('jugadores:puja')->everyMinute();
+    //    $schedule->command('repartir:puntos')->everyMinute();
+    //    $schedule->command('jugadores:puja')->everyMinute();
 
 
         // $schedule->command('inspire')

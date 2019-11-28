@@ -54,7 +54,7 @@ return [
     'defending' => "Defending",
     'midfield_player' => "Midfield player",
     'change' => "Change password",
-    'edit_profile' => ">Edit Profile",
+    'edit_profile' => "Edit Profile",
     'complete_profile' => "Complete your profile",
     'plan' => "Pick the best plan for you",
     'coin' => "coins",

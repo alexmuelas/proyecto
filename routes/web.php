@@ -64,6 +64,10 @@ Route::post('/add_bid', 'PujaController@bid')->name('bid');
 
 Route::get('/new_puja', 'PujaController@new_puja')->name('new_puja');
 Route::post('/create_puja', 'PujaController@store');
+
+Route::get('/table_edit_bid', 'PujaController@table_edit_bid')->name('table_edit_bid');
+
+
 //Tabla players
 Route::get('/player', 'PlayerController@table_player')->name('player');
 Route::get('/new_player', 'PlayerController@new_player')->name('new_player');
@@ -77,9 +81,6 @@ Route::post('/add', 'PlayerController@goals');
 
 Route::get('/deletegoals', 'PlayerController@deletegoals')->name('deletegoals');
 Route::get('/addpoints', 'PlayerController@addpoints')->name('addpoints');
-
-
-
 
 
 Route::delete('/player/{player}', 'PlayerController@destroy');

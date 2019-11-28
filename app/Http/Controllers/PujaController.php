@@ -137,6 +137,19 @@ class PujaController extends Controller
         return view ( 'pujas.table', compact ('pujas') );
     }
 
+    
+
+    public function table_edit_bid()
+    {
+        
+        // $players = Player::paginate(10);
+
+        $pujas= Puja::where('id_comprador',Auth::user()->id)->get();
+
+
+        return view ( 'pujas.edit', compact ('pujas') );
+    }
+
     public function bid(Request $request, Puja $puja, Player $player)
     {
         $cantidad =$request->quantity;

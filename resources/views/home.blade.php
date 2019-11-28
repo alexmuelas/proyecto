@@ -29,7 +29,7 @@
                               <div class="card-header card-header-rose">
                               </div>
                               <div class="card-body">
-                                <h2 class="card-title  text-center">{{ __('money')}}</h2>
+                                <h2 class="card-title  text-center">{{ __('menu.money')}}</h2>
                                 <h4 class="card-category  text-center">  {{ Auth::user()->money }} €</h4>
                               </div>
                               <div class="card-footer">

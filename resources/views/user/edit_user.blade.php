@@ -8,10 +8,10 @@
             <div class="col-md-6">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Edit Profile</h4>
-                  <p class="card-category">Complete your profile</p>
+                  <h4 class="card-title">{{ __('menu.edit_profile') }}</h4>
+                  <p class="card-category">{{ __('menu.complete_profile')}}</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="width: auto; margin: auto  140px auto 200px">
                 @if($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -26,13 +26,13 @@
                     @method('PUT')
                     <div class="row">
                      
-                      <div class="col-md-5">
+                      <div class="col-md-5" >
                         <div class="form-group">
                           <!-- <label class="bmd-label-floating"></label> -->
                           User Name:<input type="text" class="form-control" name="user_name" value= "{{ Auth::user()->user_name }}">
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-5">
                         <div class="form-group">
                           <!-- <label class="bmd-label-floating">{{ Auth::user()->email }}</label> -->
                           Email:<input type="email" class="form-control" name="email" value= "{{ Auth::user()->email }}">
@@ -40,7 +40,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-5">
                         <div class="form-group">
                           <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                           {{ __('menu.name')}}:<input type="text" class="form-control" name="name" value= "{{ Auth::user()->name }}">
@@ -49,8 +49,8 @@
                     </div>
                     
                     
-                    <button type="submit" class="btn btn-primary pull-right">{{ __('menu.save')}}</button>
-                    <a href="{{ url('/home') }}" class="btn btn-danger">{{ __('menu.cancel')}}</a>
+                    <button type="submit" class="btn btn-primary pull-center">{{ __('menu.save')}}</button>
+                    <a href="{{ url('/home') }}" class="btn btn-danger pull-center">{{ __('menu.cancel')}}</a>
 
                     <div class="clearfix"></div>
                   </form>

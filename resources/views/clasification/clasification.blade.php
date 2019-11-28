@@ -16,18 +16,14 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <a href="{{ url('/new_user') }}" style="color: white; margin: 0px 0px 20px 0px"
-                                class="btn btn-primary pull-right">{{ __('menu.new_user')}}</a>
-
-
-
+                            
                             <table id="example2" class="display" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th class="text-center">#</th>
                                         <th>User Name</th>
                                         <th>{{ __('menu.name_myteam') }}</th>
-                                        <th>{{ __('menu.headline') }}</th>
+                                        <th>{{ __('menu.titular') }}</th>
                                         <th>{{ __('menu.points') }}</th>
                                     </tr>
                                 </thead>
@@ -51,7 +47,7 @@
                                 <th class="text-center">#</th>
                                         <th>User Name</th>
                                         <th>{{ __('menu.name_myteam') }}</th>
-                                        <th>{{ __('menu.headline') }}</th>
+                                        <th>{{ __('menu.titular') }}</th>
                                         <th>{{ __('menu.points') }}</th>
                                     </tr>
                                 </tfoot>

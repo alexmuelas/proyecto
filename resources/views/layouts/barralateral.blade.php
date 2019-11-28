@@ -386,7 +386,7 @@ background-size:100% 100%;">
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="../examples/forms/regular.html">
+                                    <a class="nav-link" href="{{url('/table_edit_bid')}}">
                                         <!-- <span class="sidebar-mini"> RF </span> -->
                                         <span class="sidebar-normal"> {{ __('menu.edit.bid') }} </span>
                                     </a>
