@@ -63,17 +63,6 @@
     </div>
 </div>
 
-<!-- <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
-
-<link href="    https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-
-<script>
-    $(document).ready(function () {
-        $('#example').DataTable();
-    });
-
-</script> -->
-
 
 
 @endsection

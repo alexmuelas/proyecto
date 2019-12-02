@@ -3,55 +3,47 @@
 @section('content')
 
 <style>
-        /* .imagen {
-            width: 50%;
-        }
+    table {
+        text-align: right;
+        border: none;
+    }
 
-        .imagen img {
-            max-width: 100%;
-        } */
+    .titulo {
+        color: white;
+        background-color: green;
+        font-size: 20px;
+        border-right: 1px solid white;
+    }
 
-        table {
-            text-align: right;
-            border: none;
-        }
+    ul li {
+        list-style: none;
+    }
 
-        .titulo {
-            color: white;
-            /*background-color: #db4dff;*/
-            background-color: green;
-            font-size: 20px;
-            border-right: 1px solid white;
-        }
+    td,
+    th {
+        padding: 10px;
+    }
 
-        ul li {
-            list-style: none;
-        }
+    td {
+        font-size: 13px;
+    }
 
-        td, th {
-            padding: 10px;
-        }
+    footer {
+        position: fixed;
+        bottom: 0;
+        color: white;
+        text-align: center;
+        width: 100%;
+    }
 
-        td {
-            font-size: 13px;
-        }
 
-        footer {
-            position: fixed;
-            bottom: 0;
-            color: white;
-            text-align: center;
-            width: 100%;
-        }
 
-        
+    .informacion-footer {
+        width: 100%;
+        background-color: green;
+    }
 
-        .informacion-footer {
-            width: 100%;
-            /*background-color: #db4dff;*/
-            background-color: green;
-        }
-    </style>
+</style>
 
 <div class="content">
     <div class="container-fluid">
@@ -96,21 +88,22 @@
                 </div>
                 <br><br>
 
-<div class="row text-center">
-    <div class="col-md-5"></div>
-    <div class="col-md-2">
-        <form class="" method="POST" id="payment-form"  action="{{route('paypal-pay')}}">
-            {{ csrf_field() }}
+                <div class="row text-center">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2">
+                        <form class="" method="POST" id="payment-form" action="{{route('paypal-pay')}}">
+                            {{ csrf_field() }}
 
-            <input class="form-group" hidden name="amount" type="number" value="{{$pack->price}}">
-            <input class="form-group" hidden name="name" type="text" value="{{$pack->name}}">
-            <input type="submit" class="btn" style="background: #e91e63; color:white" value="{{ __('menu.confirm')}}">
-        </form>
-        <br>
-        <a class="btn btn-danger" href="{{ url('/addmoney') }}">{{ __('menu.cancel')}}</a>
-        <br><br><br><br><br>
-    </div>
-</div>
+                            <input class="form-group" hidden name="amount" type="number" value="{{$pack->price}}">
+                            <input class="form-group" hidden name="name" type="text" value="{{$pack->name}}">
+                            <input type="submit" class="btn" style="background: #e91e63; color:white"
+                                value="{{ __('menu.confirm')}}">
+                        </form>
+                        <br>
+                        <a class="btn btn-danger" href="{{ url('/addmoney') }}">{{ __('menu.cancel')}}</a>
+                        <br><br><br><br><br>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

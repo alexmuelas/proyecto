@@ -45,7 +45,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
-                                        {{ __('menu.name')}}:<input type="number" min="0" class="form-control"
+                                        {{ __('menu.money')}}:<input type="number" min="0" class="form-control"
                                             value="{{ old('money') }}" name="money">
                                     </div>
                                 </div>

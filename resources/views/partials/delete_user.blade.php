@@ -11,9 +11,6 @@
                 @csrf
                 @method('DELETE')
                 <input type="hidden" value="{{$user->id }}">
-                <!-- <div class="modal-body">
-                    <input type="number" min="1" name="quantity" value="1" class="form-control">
-                </div> -->
 
                 <div class="modal-footer">
                     <button type="sumbit" class="btn btn-primary">{{ __('menu.delete') }}</button>

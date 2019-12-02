@@ -29,11 +29,10 @@
 
 
 
-                            <button class="btn btn-primary btn-simple btn-sm  pull-right"> <a
+                         <a class="btn btn-primary btn-simple btn-sm  pull-right"
                                     href="{{ url('/new_puja') }}"
                                     style="color: white; margin: 0px 0px 20px 0px">{{ __('menu.new_player')}}</a>
 
-                            </button>
 
 
 

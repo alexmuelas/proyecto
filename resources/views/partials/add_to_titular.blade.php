@@ -11,17 +11,13 @@
                 @csrf
                 <input type="hidden" name="player_id" value="{{$player->id}}">
 
-                <!-- <div class="modal-body"> -->
-                    <!-- <input type="number" min="0" name="quantity2" value="0">
-                </div> -->
                 <div class="col-md-4">
 
                     <div class="form-group" >
-                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
-                        <!-- <input type="number" min="0" class="form-control" name="quantity"> -->
+                       
                         <select name="titular" style="text-align: center; margin: 0px 0px 40px 175px" class="form-control">
 
-                                            <option value="X">{{__('menu.choose_team')}}</option>
+                                            <option value="X">¿{{__('menu.titular')}}?</option>
                                             <option value="1">Si</option>
                                             <option value="0">No</option>
                                         </select>

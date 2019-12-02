@@ -75,7 +75,8 @@ return [
     'calculate_points' => "Calculate points",
     'go_team' => "Go to team",
     'go_clasification' => "Go to clasification",
-    'add_puja' => "Add bid"
+    'add_puja' => "Add bid",
+    'delete_goals' => "Delete goals"
 
 
 

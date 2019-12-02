@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="{{ asset ('css/material-dashboard.min.css?v=2.1.0')}}" rel="stylesheet" />
-    <!-- Google Tag Manager -->
 
     <!--   Core JS Files   -->
     <script src=" {{ asset ('js/core/jquery.min.js')}}"></script>
@@ -111,7 +110,6 @@
                 }
 
                 $('.fixed-plugin a').click(function (event) {
-                    // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
                     if ($(this).hasClass('switch-trigger')) {
                         if (event.stopPropagation) {
                             event.stopPropagation();
@@ -254,12 +252,10 @@
                         }, 300);
                     }
 
-                    // we simulate the window Resize so the charts will get updated in realtime.
                     var simulateWindowResize = setInterval(function () {
                         window.dispatchEvent(new Event('resize'));
                     }, 180);
 
-                    // we stop the simulation of Window Resize after the animations are completed
                     setTimeout(function () {
                         clearInterval(simulateWindowResize);
                     }, 1000);
@@ -276,24 +272,14 @@
     <div class="wrapper " style="background-image: url({{ asset('img/estadio.jpg') }});  background-repeat:no-repeat;
 background-size:100% 100%;">
         <div class="sidebar" data-color="rose" data-background-color="black" data-image="#">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-            <!-- <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                    CT
-                </a>
-                <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                    Creative Tim
-                </a>
-            </div> -->
+           
             <div class="sidebar-wrapper">
                 <div class="user">
                     <div class="photo">
-                        <img style="height: 40px" src="http://proyectocomunio.local/img/logo_alex_jugador_solo.jpg" />
-                        
+                        <!-- <img style="height: 40px" src="http://proyectocomunio.local/img/logo_alex_jugador_solo.jpg" /> -->
+                        <!-- <img style="height: 40px" src="../../img/logo_alex_jugador_solo.jpg" /> -->
+                        <img style="height: 40px" src="{{ asset('img/logo_alex_jugador_solo.jpg') }}" />
+
                     </div>
                     <div class="user-info">
                         <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -323,13 +309,7 @@ background-size:100% 100%;">
                                         <span class="sidebar-normal"> {{ __('menu.change') }} </span>
                                     </a>
                                 </li>
-                                <!--  <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span class="sidebar-mini"> S </span>
-                    <span class="sidebar-normal"> Settings </span>
-                  </a>
-                </li>
-                --->
+                                
 
                             </ul>
                         </div>
@@ -354,7 +334,6 @@ background-size:100% 100%;">
                         <ul class="nav">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="{{ url('/team') }}">
-                                        <!-- <span class="sidebar-mini"> P </span> -->
                                         <span class="sidebar-normal"> {{ __('menu.team') }} </span>
                                     </a>
                                 </li>
@@ -362,7 +341,6 @@ background-size:100% 100%;">
                             <ul class="nav">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="{{ url('/edit_team') }}">
-                                        <!-- <span class="sidebar-mini"> P </span> -->
                                         <span class="sidebar-normal"> {{ __('menu.edit_team') }} </span>
                                     </a>
                                 </li>
@@ -381,13 +359,11 @@ background-size:100% 100%;">
                             <ul class="nav">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="{{ url('/pujas') }}">
-                                        <!-- <span class="sidebar-mini"> B </span> -->
                                         <span class="sidebar-normal"> {{ __('menu.bid') }} </span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="{{url('/table_edit_bid')}}">
-                                        <!-- <span class="sidebar-mini"> RF </span> -->
                                         <span class="sidebar-normal"> {{ __('menu.edit.bid') }} </span>
                                     </a>
                                 </li>
@@ -402,9 +378,6 @@ background-size:100% 100%;">
                             <span class="sidebar-normal"> {{ __('menu.clasification') }} </span>
                         </a>
                     </li>
-                    
-
-
 
 
                     @if(auth()->user()->admin == true)
@@ -473,10 +446,12 @@ background-size:100% 100%;">
 
                 <div class="collapse navbar-collapse">
                 
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();" style="color: white;">
+                    <a class="nav-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" style="color: white; padding: 0px 20px 0px 0px">
                         {{ __('Logout') }}
                     </a>
+
+                    
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf
@@ -486,11 +461,7 @@ background-size:100% 100%;">
             </nav>
             <!-- End Navbar -->
 
-
-
             <div class="wrapper wrapper-full-page">
-                <!-- <div class="page-header" filter-color="black"
-                    style="background-image: url({{ asset('img/estadio.jpg') }}); background-size: cover; "> -->
                 <div class="py-5">
                     @yield('content')
                 </div>

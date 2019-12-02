@@ -11,13 +11,10 @@
                 @csrf
                 <input type="hidden" name="user_id" value="{{ $player->id }}">
 
-                <!-- <div class="modal-body">
-                    <input type="number" min="0" name="quantity2" value="0">
-                </div> -->
+                
                 <div class="col-md-4">
 
                     <div class="form-group">
-                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                         <input style="text-align: center; margin: 40px 0px 0px 175px" type="number" min="0"
                             class="form-control" name="quantity">
                     </div>

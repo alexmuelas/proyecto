@@ -62,7 +62,7 @@
                                             <!--------------------------------------------- -->
                                             <button class="btn btn-primary btn-round btn-sm" data-toggle="modal"
                                                 data-target="#modalAddToBid{{$puja->id }}{{ $puja->money_puja}}{{$puja->id_vendedor}}{{$puja->name_player }}{{$puja->id_position}}" id="{{$puja->id}}"
-                                                title="{{ __('menu.add_puja')}}">
+                                                title="{{ __('menu.edit.bid')}}">
                                                 <i style="font-size: 1em;  width:6; height:6;"
                                                     class="material-icons">sports_soccer</i></button>
 

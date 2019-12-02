@@ -10,14 +10,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-        /* .imagen {
-            width: 50%;
-        }
-
-        .imagen img {
-            max-width: 100%;
-        } */
-
+        
         table {
             text-align: right;
             border: none;
@@ -25,7 +18,6 @@
 
         .titulo {
             color: white;
-            /*background-color: #db4dff;*/
             background-color: green;
             font-size: 20px;
             border-right: 1px solid white;
@@ -55,7 +47,6 @@
 
         .informacion-footer {
             width: 100%;
-            /*background-color: #db4dff;*/
             background-color: green;
         }
     </style>
@@ -113,13 +104,6 @@
     </div>
 </div>
 
-<!-- <footer>
-
-    <div class="informacion-footer">
-        <p>Comunio España</p>
-    </div>
-
-</footer> -->
 </body>
 </html>
 

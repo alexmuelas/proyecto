@@ -19,11 +19,11 @@
                         <div class="table-responsive">
 
                                     <!-- Vaciar tabla goles mediante modal -->
-                        <button class="btn btn-danger btn-simple btn-sm  pull-right" data-toggle="modal"
+                        <button class="btn btn-danger btn-simple btn-sm  pull-right" data-toggle="modal" style="color: white; margin: 0px 0px 0px 5px"
                                             data-target="#modalDeleteGoals" id=""
-                                            title="{{ __('menu.add_goals')}}"
+                                            title="{{ __('menu.delete_goals')}}"
                                     >
-                                    {{ __('menu.delete') }}</button>
+                                    {{ __('menu.delete_goals') }}</button>
 
                                                     @include('partials.delete_goals')
 
@@ -44,11 +44,8 @@
 
 
 
-                           <button  class="btn btn-primary btn-simple btn-sm  pull-right"> <a href="{{ url('/new_player') }}" style="color: white; margin: 0px 0px 20px 0px"
+                            <a href="{{ url('/new_player') }}"  class="btn btn-primary btn-simple btn-sm  pull-right" style="color: white; margin: 0px 0px 20px 0px"
                                >{{ __('menu.new_player')}}</a>
-
-                           </button>
-
 
 
                             <table id="example3" class="display" style="width:100%">

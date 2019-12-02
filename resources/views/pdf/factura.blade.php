@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-        /* .imagen {
-            width: 50%;
-        }
-        .imagen img {
-            max-width: 100%;
-        } */
 
         table {
             text-align: right;
@@ -22,7 +16,6 @@
         }
         .titulo {
             color: white;
-            /*background-color: #db4dff;*/
             background-color: green;
             font-size: 20px;
             border-right: 2px solid white;
@@ -53,7 +46,6 @@
 
         .informacion-footer {
             width: 100%;
-            /*background-color: #db4dff;*/
             background-color: green;
 
         }
@@ -65,7 +57,6 @@
     <div class="row">
         <div class="col-md-6">
             <div class="imagen">
-            <!-- Falta insertar logo -->
                 <img src="{{ public_path('img/logo_alex.jpg') }}" style="width:100%;" alt="Logo">
             </div>
         </div>

@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="{{ asset ('css/material-dashboard.min.css?v=2.1.0')}}" rel="stylesheet" />
-    <!-- Google Tag Manager -->
 
     <!--   Core JS Files   -->
     <script src=" {{ asset ('js/core/jquery.min.js')}}"></script>
@@ -81,7 +80,6 @@
                 }
 
                 $('.fixed-plugin a').click(function (event) {
-                    // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
                     if ($(this).hasClass('switch-trigger')) {
                         if (event.stopPropagation) {
                             event.stopPropagation();
@@ -224,12 +222,10 @@
                         }, 300);
                     }
 
-                    // we simulate the window Resize so the charts will get updated in realtime.
                     var simulateWindowResize = setInterval(function () {
                         window.dispatchEvent(new Event('resize'));
                     }, 180);
 
-                    // we stop the simulation of Window Resize after the animations are completed
                     setTimeout(function () {
                         clearInterval(simulateWindowResize);
                     }, 1000);
@@ -265,13 +261,6 @@
 
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
-
-
-                        <!-- <li class="nav-item">
-                            <a href="../dashboard.html" class="nav-link">
-                                <i class="material-icons">dashboard</i> Dashboard
-                            </a>
-                        </li> -->
 
                         <li class="nav-item">
                             <a href="login" class="nav-link">
@@ -322,12 +311,6 @@
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
 
-
-                    
-
-
-
-
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -340,9 +323,7 @@
                                     Dashboard
                                 </a>
 
-                                <!-- <a href="home" class="dropdown-item">
-                                    {{ __('menu.spain') }}
-                                </a> -->
+                               
 
                                 <a href="users" class="dropdown-item">
                                     {{ __('menu.user') }}
