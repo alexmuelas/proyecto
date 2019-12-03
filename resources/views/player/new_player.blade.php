@@ -9,7 +9,6 @@
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">{{ __('menu.new_player') }}</h4>
-                        <!-- <p class="card-category">Complete your profile</p> -->
                     </div>
                     <div class="card-body">
                         @if($errors->any())
@@ -26,7 +25,6 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.name')}}:<input type="text" class="form-control"
                                             value="{{ old('name') }}" name="name">
                                     </div>
@@ -34,7 +32,6 @@
 
                                 <div class="col-md-6">
                                     <div class="">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
 
                                         {{ __('menu.owner') }}:
 
@@ -53,7 +50,6 @@
                                 <div class="col-md-6">
 
                                     <div class="">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
 
                                         {{ __('menu.team') }}:
 
@@ -68,7 +64,6 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.dorsal')}}:<input type="number"  min="0"class="form-control"
                                             value="{{ old('dorsal') }}" name="dorsal">
                                     </div>
@@ -80,7 +75,6 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.initial_value')}}:<input type="number" min="0" class="form-control"
                                             value="{{ old('initial_value') }}" name="initial_value">
                                     </div>
@@ -88,7 +82,6 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.points')}}:<input type="number" min="0" class="form-control"
                                             value="{{ old('points') }}" name="points">
                                     </div>
@@ -101,7 +94,6 @@
 
                                 <div class="col-md-6">
                                     <div class="">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
 
                                         {{ __('menu.choose_position')}}:
 

@@ -28,22 +28,6 @@
                                                     @include('partials.delete_goals')
 
 
-                                        <!-- Dar puntos a los jugadores -->
-                        <!-- <button class="btn btn-primary btn-simple btn-sm  pull-right" data-toggle="modal"
-                                            data-target="#modalAddPoints" id=""
-                                            title="{{ __('menu.add_goals')}}"
-                                    >
-                                    {{ __('menu.calculate_points') }} </button>
-
-                                                    @include('partials.add_points') -->
-
-
-                                                    <!-- <button class="btn btn-primary btn-round btn-sm  pull-right" dhref="{{ url('/new_player') }}"
-                                            title="{{ __('menu.add_goals')}}"
-                                    >{{ __('menu.new_player')}}</button> -->
-
-
-
                             <a href="{{ url('/new_player') }}"  class="btn btn-primary btn-simple btn-sm  pull-right" style="color: white; margin: 0px 0px 20px 0px"
                                >{{ __('menu.new_player')}}</a>
 
@@ -71,7 +55,6 @@
 
                                         <td class="text-center">{{ $player->id}}</td>
                                         <td>{{ $player->name}}</td>
-                                        <!-- <td>{{ $player->id_user}}</td> -->
                                         <td>{{ $player->user_name}}</td>
                                         <td>{{ $player->team_name}}</td>
                                         <td>{{ $player->num_dorsal}}</td>

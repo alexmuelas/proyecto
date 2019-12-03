@@ -27,7 +27,6 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.name')}}:<input type="text" class="form-control"
                                             value="{{ $player->name }}" name="name">
                                     </div>
@@ -35,7 +34,6 @@
 
                                 <div class="col-md-6">
                                     <div class="">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
 
                                         {{ __('menu.owner') }}:
 
@@ -57,7 +55,6 @@
                                 <div class="col-md-6">
 
                                     <div class="">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
 
                                         {{ __('menu.team') }}:
 
@@ -78,7 +75,6 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.dorsal')}}:<input type="text" class="form-control"
                                             value="{{ $player->num_dorsal }}" name="dorsal">
                                     </div>
@@ -90,7 +86,6 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.initial_value')}}:<input type="text" class="form-control"
                                             value="{{ $player->valor_inicial }}" name="initial_value">
                                     </div>
@@ -98,7 +93,6 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.points')}}:<input type="text" class="form-control"
                                             value="{{ $player->points }}" name="points">
                                     </div>
@@ -111,7 +105,6 @@
 
                                 <div class="col-md-6">
                                     <div class="">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
 
                                         {{ __('menu.choose_position')}}:
 
@@ -124,21 +117,6 @@
                                                 @endif
                                                 >{{ $position->name }}</option>
                                             @endforeach
-
-
-
-
-
-
-
-                                            <!-- <option value="0">{{ __('menu.choose_position')}}</option>
-                                            <option value="{{ __('menu.forward')}}">{{ __('menu.forward')}}</option>
-                                            <option value="{{ __('menu.goalkeeper')}}">{{ __('menu.goalkeeper')}}
-                                            </option>
-                                            <option value="{{ __('menu.defending')}}">{{ __('menu.defending')}}</option>
-                                            <option value="{{ __('menu.midfield_player')}}">
-                                                {{ __('menu.midfield_player')}}</option> -->
-
 
                                         </select>
                                     </div>

@@ -40,7 +40,6 @@
 
                                         <td class="text-center">{{ $player->id}}</td>
                                         <td>{{ $player->name}}</td>
-                                        <!-- <td>{{ $player->id_user}}</td> -->
                                         <td>{{ $player->team_name}}</td>
                                         <td>{{ $player->num_dorsal}}</td>
                                         <td>{{ $player->valor_inicial}} &euro;</td>

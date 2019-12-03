@@ -15,14 +15,12 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="form-group">
-                                    <!-- <label class="bmd-label-floating"></label> -->
                                     User Name:<input type="text" class="form-control" name="user_name"
                                         value="{{ Auth::user()->user_name }}" readonly>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <!-- <label class="bmd-label-floating">{{ Auth::user()->email }}</label> -->
                                     Email:<input type="email" class="form-control" name="email"
                                         value="{{ Auth::user()->email }}" readonly>
                                 </div>
@@ -32,7 +30,6 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="form-group">
-                                    <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                     {{ __('menu.name')}}:<input type="text" class="form-control" name="name"
                                         value="{{ Auth::user()->name }}" readonly>
                                 </div>
@@ -42,7 +39,6 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="form-group">
-                                    <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                     {{ __('menu.name_myteam')}}:<input type="text" class="form-control" name="name"
                                         value="{{ Auth::user()->name_myteam }}" readonly>
                                 </div>
@@ -50,7 +46,6 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                     {{ __('menu.money')}}:<input type="text" class="form-control" name="name"
                                         value="{{ Auth::user()->money }} €" readonly>
                                 </div>

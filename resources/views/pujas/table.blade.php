@@ -61,13 +61,6 @@
 
 
                                         <td class="td-actions text-right">
-
-                                            <!-- <a type="button" rel="tooltip" class="btn btn-success btn-round btn-sm"
-                                                href="{{ url('/player/' . $puja->id . '/edit' ) }}">
-                                                <i style="font-size: 1em;  width:6; height:6;"
-                                                    class="material-icons">edit</i>
-                                            </a> -->
-
                                             
                                             <!--------------------------------------------- -->
                                             <button class="btn btn-primary btn-round btn-sm" data-toggle="modal"

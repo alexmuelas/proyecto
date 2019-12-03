@@ -9,7 +9,6 @@
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">{{ __('menu.new_player') }}</h4>
-                        <!-- <p class="card-category">Complete your profile</p> -->
                     </div>
                     <div class="card-body">
                         @if($errors->any())
@@ -28,7 +27,6 @@
 
                                 <div class="col-md-6">
                                     <div class="">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
 
                                         {{ __('menu.owner') }}:
 
@@ -44,7 +42,6 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                                         {{ __('menu.money')}}:<input type="number" min="0" class="form-control"
                                             value="{{ old('money') }}" name="money">
                                     </div>

@@ -9,7 +9,6 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">{{ __('menu.edit_profile') }}</h4>
-                  <!-- <p class="card-category">{{ __('menu.complete_profile') }}</p> -->
                 </div>
                 <div class="card-body">
                 @if($errors->any())
@@ -28,13 +27,11 @@
                      
                       <div class="col-md-5">
                         <div class="form-group">
-                          <!-- <label class="bmd-label-floating"></label> -->
                           User Name:<input type="text" class="form-control" name="user_name" value= "{{ $user->user_name }}">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <!-- <label class="bmd-label-floating">{{ Auth::user()->email }}</label> -->
                           Email:<input type="email" class="form-control" name="email" value= "{{ $user->email }}">
                         </div>
                       </div>
@@ -42,7 +39,6 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                           {{ __('menu.name')}}:<input type="text" class="form-control" name="name" value= "{{ $user->name }}">
                         </div>
                       </div>
@@ -51,7 +47,6 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <!-- <label class="bmd-label-floating">{{ Auth::user()->name }}</label> -->
                           {{ __('menu.money')}}:<input type="text" class="form-control" name="money" value= "{{ $user->money }}">
                         </div>
                       </div>

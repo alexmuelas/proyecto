@@ -24,8 +24,6 @@
                     @endif
                     <div class="card-body">
                         <div class="table-responsive">
-                            <!-- <a href="{{ url('/new_player') }}" style="color: white; margin: 0px 0px 20px 0px"
-                                class="btn btn-primary pull-right">{{ __('menu.new_player')}}</a> -->
 
                             <a class="btn btn-primary btn-round btn-sm pull-right" data-toggle="modal"
                                 data-target="#modalAddToProduct" id="" title="{{ __('menu.add_goals')}}"
@@ -57,7 +55,6 @@
 
                                         <td class="text-center">{{ $player->id}}</td>
                                         <td>{{ $player->name}}</td>
-                                        <!-- <td>{{ $player->id_user}}</td> -->
                                         <td>{{ $player->team_name}}</td>
                                         <td>{{ $player->num_dorsal}}</td>
                                         <td>{{ $player->valor_inicial}} &euro;</td>
